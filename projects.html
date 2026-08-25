@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects & Initiatives — Socido (socido.org)</title>
+  <meta name="description" content="Discover active and upcoming community projects powered by Socido, spanning digital literacy, urban greening, and youth mentorship.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header / Navigation Bar -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-badge">S</div>
+        <span>Socido</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="projects.html" class="nav-link active">Projects</a></li>
+          <li><a href="support.html" class="nav-link">Support Us</a></li>
+          <li><a href="support.html" class="btn btn-primary">Get Involved</a></li>
+        </ul>
+      </nav>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Header -->
+    <section class="section" style="padding-top: 4rem; padding-bottom: 2rem; text-align: center; background: radial-gradient(circle at 50% 0%, rgba(13, 148, 136, 0.15) 0%, rgba(9, 13, 22, 1) 70%);">
+      <div class="container">
+        <span class="tag">Community Impact</span>
+        <h1 style="font-size: 3rem; margin-top: 0.5rem;">Our Active <span class="text-gradient">Projects</span></h1>
+        <p style="color: var(--text-muted); max-width: 650px; margin: 1rem auto 0 auto; font-size: 1.15rem;">Explore the initiatives driven by Socido and our network of passionate volunteers and partners.</p>
+      </div>
+    </section>
+
+    <!-- Projects Showcase Grid -->
+    <section class="section">
+      <div class="container">
+        <div class="card-grid">
+          
+          <!-- Project Card 1 -->
+          <div class="project-card">
+            <div class="project-thumb">
+              <img src="images/hero_banner.jpg" alt="Urban Community Garden Project">
+              <span class="project-badge">Active Initiative</span>
+            </div>
+            <div class="project-content">
+              <h3>Urban Greening & Community Agriculture</h3>
+              <p>Converting unused vacant lots into thriving community gardens providing fresh produce and green space for urban neighborhoods.</p>
+              
+              <div class="progress-bar-wrap">
+                <div class="progress-info">
+                  <span>Funding Goal ($15,000)</span>
+                  <span style="font-weight: 700; color: #2dd4bf;">82% Funded</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 82%;"></div>
+                </div>
+              </div>
+
+              <button class="btn btn-secondary" style="width: 100%; margin-top: 0.5rem;" onclick="openModal('Urban Greening & Community Agriculture', '<p>This project aims to transform 5 vacant lots into community gardens by Q4 2026.</p><br><p><strong>Impact Goals:</strong><br>• Provide 2,000+ lbs of fresh produce<br>• Engage 300+ local families<br>• Host weekly sustainability workshops</p>')">View Project Details</button>
+            </div>
+          </div>
+
+          <!-- Project Card 2 -->
+          <div class="project-card">
+            <div class="project-thumb">
+              <img src="images/about_mission.jpg" alt="Digital Literacy Bootcamps">
+              <span class="project-badge">Education</span>
+            </div>
+            <div class="project-content">
+              <h3>NextGen Digital Literacy Bootcamps</h3>
+              <p>Equipping underserved youth and adults with essential tech skills, coding basics, and digital career guidance.</p>
+              
+              <div class="progress-bar-wrap">
+                <div class="progress-info">
+                  <span>Funding Goal ($25,000)</span>
+                  <span style="font-weight: 700; color: #2dd4bf;">95% Funded</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 95%;"></div>
+                </div>
+              </div>
+
+              <button class="btn btn-secondary" style="width: 100%; margin-top: 0.5rem;" onclick="openModal('NextGen Digital Literacy Bootcamps', '<p>Free 12-week technology bootcamps providing hardware and instruction for participants.</p><br><p><strong>Impact Goals:</strong><br>• 150 graduates per year<br>• 1-on-1 industry mentorship<br>• Job readiness placement assistance</p>')">View Project Details</button>
+            </div>
+          </div>
+
+          <!-- Project Card 3 -->
+          <div class="project-card">
+            <div class="project-thumb">
+              <img src="images/support_hero.jpg" alt="Youth Leadership & Mentorship">
+              <span class="project-badge">Mentorship</span>
+            </div>
+            <div class="project-content">
+              <h3>Youth Leadership & Civic Mentorship</h3>
+              <p>Pairing high school students with community mentors to develop civic engagement, public speaking, and project management skills.</p>
+              
+              <div class="progress-bar-wrap">
+                <div class="progress-info">
+                  <span>Funding Goal ($10,000)</span>
+                  <span style="font-weight: 700; color: #2dd4bf;">70% Funded</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 70%;"></div>
+                </div>
+              </div>
+
+              <button class="btn btn-secondary" style="width: 100%; margin-top: 0.5rem;" onclick="openModal('Youth Leadership & Civic Mentorship', '<p>Connecting high school students with real-world civic projects and community leaders.</p><br><p><strong>Impact Goals:</strong><br>• 50 youth cohort placements<br>• Annual Leadership Summit<br>• Community service scholarships</p>')">View Project Details</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal overlay container for popups -->
+  <div id="modalOverlay" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.8); backdrop-filter: blur(8px); z-index: 2000; align-items: center; justify-content: center; padding: 1.5rem;">
+    <div style="background: var(--bg-dark); border: 1px solid var(--border-glow); border-radius: var(--radius-md); max-width: 550px; width: 100%; padding: 2rem; position: relative; box-shadow: var(--shadow-card);">
+      <button id="modalClose" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer;">✕</button>
+      <h3 id="modalTitle" style="font-size: 1.5rem; margin-bottom: 1rem;">Information</h3>
+      <div id="modalBody" style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="logo-badge">S</div>
+            <span>Socido</span>
+          </a>
+          <p>Dedicated to community development, social innovation, and sustainable empowerment worldwide.</p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="support.html">Support Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Programs</h4>
+          <ul class="footer-links">
+            <li><a href="projects.html">Digital Literacy</a></li>
+            <li><a href="projects.html">Eco Revitalization</a></li>
+            <li><a href="projects.html">Youth Mentorship</a></li>
+            <li><a href="projects.html">Community Grants</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Connect</h4>
+          <ul class="footer-links">
+            <li><a href="https://socido.org">socido.org</a></li>
+            <li><a href="support.html">Contact Team</a></li>
+            <li><a href="support.html">Partner With Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Socido (socido.org). All rights reserved.</p>
+        <p>Hosted on GitHub Pages</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

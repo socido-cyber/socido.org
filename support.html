@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support Us — Socido (socido.org)</title>
+  <meta name="description" content="Support Socido through donations, volunteering, or corporate partnerships to make a lasting social impact.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header / Navigation Bar -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-badge">S</div>
+        <span>Socido</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="support.html" class="nav-link active">Support Us</a></li>
+          <li><a href="support.html" class="btn btn-primary">Get Involved</a></li>
+        </ul>
+      </nav>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Header -->
+    <section class="section" style="padding-top: 4rem; padding-bottom: 2rem; text-align: center; background: radial-gradient(circle at 50% 0%, rgba(13, 148, 136, 0.15) 0%, rgba(9, 13, 22, 1) 70%);">
+      <div class="container">
+        <span class="tag">Get Involved</span>
+        <h1 style="font-size: 3rem; margin-top: 0.5rem;">Support Our <span class="text-gradient">Mission</span></h1>
+        <p style="color: var(--text-muted); max-width: 650px; margin: 1rem auto 0 auto; font-size: 1.15rem;">Every contribution—big or small—empowers communities and transforms lives.</p>
+      </div>
+    </section>
+
+    <!-- Support Hero Image Banner -->
+    <section class="section" style="padding-top: 1rem;">
+      <div class="container">
+        <div class="hero-image-wrapper" style="max-height: 400px;">
+          <img src="images/support_hero.jpg" alt="Hands united in support of Socido">
+        </div>
+      </div>
+    </section>
+
+    <!-- Support Tiers -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="tag">Ways to Give</span>
+          <h2>Contribution Tiers</h2>
+          <p>Choose how you would like to back our community programs.</p>
+        </div>
+
+        <div class="support-tier-grid">
+          
+          <div class="tier-card">
+            <h3 class="tier-title">Grassroots Supporter</h3>
+            <div class="tier-price">$25 <span style="font-size: 1rem; font-weight: 400; color: var(--text-muted);">/ mo</span></div>
+            <ul class="tier-features">
+              <li>Provides monthly workshop materials</li>
+              <li>Quarterly Impact Newsletter</li>
+              <li>Donor Recognition Wall</li>
+            </ul>
+            <button class="btn btn-secondary" style="width: 100%;" onclick="openModal('Pledge: Grassroots Supporter', '<p>Thank you for choosing to support Socido at the Grassroots tier ($25/mo)!</p><br><p>Once your domain payment portal is configured, this button will direct to your checkout link.</p>')">Pledge Support</button>
+          </div>
+
+          <div class="tier-card featured">
+            <h3 class="tier-title">Community Champion</h3>
+            <div class="tier-price">$100 <span style="font-size: 1rem; font-weight: 400; color: var(--text-muted);">/ mo</span></div>
+            <ul class="tier-features">
+              <li>Sponsors 1 student bootcamp seat</li>
+              <li>Direct project progress reports</li>
+              <li>VIP Invite to Annual Summit</li>
+              <li>Dedicated mentor updates</li>
+            </ul>
+            <button class="btn btn-primary" style="width: 100%;" onclick="openModal('Pledge: Community Champion', '<p>Thank you for backing Socido as a Community Champion ($100/mo)!</p><br><p>Once your payment portal is connected, donors will complete pledges directly here.</p>')">Pledge Support</button>
+          </div>
+
+          <div class="tier-card">
+            <h3 class="tier-title">Visionary Patron</h3>
+            <div class="tier-price">$500 <span style="font-size: 1rem; font-weight: 400; color: var(--text-muted);">/ mo</span></div>
+            <ul class="tier-features">
+              <li>Seed-funds 1 full community grant</li>
+              <li>Prominent corporate logo placement</li>
+              <li>Custom impact dashboard access</li>
+              <li>Executive briefing meetings</li>
+            </ul>
+            <button class="btn btn-secondary" style="width: 100%;" onclick="openModal('Pledge: Visionary Patron', '<p>Thank you for becoming a Visionary Patron ($500/mo)!</p><br><p>Our partnership lead will coordinate direct sponsorship details with your team.</p>')">Pledge Support</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Volunteer & Contact Form -->
+    <section class="section" style="background: rgba(15, 23, 42, 0.4);">
+      <div class="container" style="max-width: 800px;">
+        <div class="section-header">
+          <span class="tag">Join the Movement</span>
+          <h2>Volunteer or Partner With Us</h2>
+          <p>Send us a message to volunteer your time, skills, or organize a partnership.</p>
+        </div>
+
+        <div class="glass-card" style="padding: 2.5rem;">
+          <form onsubmit="event.preventDefault(); openModal('Message Sent', '<p>Thank you for reaching out to Socido! We have received your inquiry and will respond to your email shortly.</p>');">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+              <div>
+                <label style="display: block; font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.5rem;">Your Name</label>
+                <input type="text" required placeholder="Jane Doe" style="width: 100%; padding: 0.75rem 1rem; background: rgba(9, 13, 22, 0.8); border: 1px solid var(--border-light); border-radius: var(--radius-sm); color: #fff; font-family: var(--font-body);">
+              </div>
+              <div>
+                <label style="display: block; font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.5rem;">Email Address</label>
+                <input type="email" required placeholder="jane@example.com" style="width: 100%; padding: 0.75rem 1rem; background: rgba(9, 13, 22, 0.8); border: 1px solid var(--border-light); border-radius: var(--radius-sm); color: #fff; font-family: var(--font-body);">
+              </div>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+              <label style="display: block; font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.5rem;">How would you like to get involved?</label>
+              <select style="width: 100%; padding: 0.75rem 1rem; background: rgba(9, 13, 22, 0.8); border: 1px solid var(--border-light); border-radius: var(--radius-sm); color: #fff; font-family: var(--font-body);">
+                <option>Volunteer Skills (Coding, Teaching, Organizing)</option>
+                <option>Corporate Partnership</option>
+                <option>Community Grant Inquiry</option>
+                <option>General Question</option>
+              </select>
+            </div>
+
+            <div style="margin-bottom: 2rem;">
+              <label style="display: block; font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.5rem;">Your Message</label>
+              <textarea rows="4" required placeholder="Tell us a little bit about yourself or your organization..." style="width: 100%; padding: 0.75rem 1rem; background: rgba(9, 13, 22, 0.8); border: 1px solid var(--border-light); border-radius: var(--radius-sm); color: #fff; font-family: var(--font-body); resize: vertical;"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal overlay container for popups -->
+  <div id="modalOverlay" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.8); backdrop-filter: blur(8px); z-index: 2000; align-items: center; justify-content: center; padding: 1.5rem;">
+    <div style="background: var(--bg-dark); border: 1px solid var(--border-glow); border-radius: var(--radius-md); max-width: 550px; width: 100%; padding: 2rem; position: relative; box-shadow: var(--shadow-card);">
+      <button id="modalClose" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer;">✕</button>
+      <h3 id="modalTitle" style="font-size: 1.5rem; margin-bottom: 1rem;">Information</h3>
+      <div id="modalBody" style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="logo-badge">S</div>
+            <span>Socido</span>
+          </a>
+          <p>Dedicated to community development, social innovation, and sustainable empowerment worldwide.</p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="support.html">Support Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Programs</h4>
+          <ul class="footer-links">
+            <li><a href="projects.html">Digital Literacy</a></li>
+            <li><a href="projects.html">Eco Revitalization</a></li>
+            <li><a href="projects.html">Youth Mentorship</a></li>
+            <li><a href="projects.html">Community Grants</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Connect</h4>
+          <ul class="footer-links">
+            <li><a href="https://socido.org">socido.org</a></li>
+            <li><a href="support.html">Contact Team</a></li>
+            <li><a href="support.html">Partner With Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Socido (socido.org). All rights reserved.</p>
+        <p>Hosted on GitHub Pages</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
