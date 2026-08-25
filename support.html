@@ -69,7 +69,7 @@
               <li>Quarterly Newsletter & Program Updates</li>
               <li>Donor Wall Recognition</li>
             </ul>
-            <button class="btn btn-secondary" style="width: 100%;" onclick="openModal('Pledge: Classroom Supporter', '<p>Thank you for supporting our Language + X students ($25/mo)!</p><br><p>When payment processing is integrated, this pledge will automatically enroll your recurring contribution.</p>')">Pledge Support</button>
+            <button class="btn btn-secondary" style="width: 100%;" onclick="openModal('Pledge: Classroom Supporter', '<p>Thank you for supporting our Language + X students ($25/mo)!</p><br><p>Inquiries or pledges will be routed directly to <strong>cici.socido@gmail.com</strong>.</p>')">Pledge Support</button>
           </div>
 
           <div class="tier-card featured">
@@ -80,7 +80,7 @@
               <li>VIP Passes to all exhibition galas and showcases</li>
               <li>Direct updates from program instructors</li>
             </ul>
-            <button class="btn btn-primary" style="width: 100%;" onclick="openModal('Pledge: Art & Culture Sponsor', '<p>Thank you for sponsoring our cross-cultural art events ($100/mo)!</p><br><p>Your support directly enables artists to collaborate across cultural divides.</p>')">Pledge Support</button>
+            <button class="btn btn-primary" style="width: 100%;" onclick="openModal('Pledge: Art & Culture Sponsor', '<p>Thank you for sponsoring our cross-cultural art events ($100/mo)!</p><br><p>Inquiries or pledges will be routed directly to <strong>cici.socido@gmail.com</strong>.</p>')">Pledge Support</button>
           </div>
 
           <div class="tier-card">
@@ -104,38 +104,38 @@
         <div class="section-header">
           <span class="tag">Join Us</span>
           <h2>Teach, Perform, or Volunteer</h2>
-          <p>Are you a language teacher, artist, dancer, or parent who wants to help? We'd love to hear from you!</p>
+          <p>Are you a language teacher, artist, dancer, or parent who wants to help? Send us a message below!</p>
         </div>
 
         <div class="glass-card" style="padding: 2.5rem;">
-          <form onsubmit="event.preventDefault(); openModal('Inquiry Received', '<p>Thank you for reaching out to Socido! We are excited to connect with you about our Language + X programs and cultural events.</p>');">
+          <form action="https://formspree.io/f/cici.socido@gmail.com" method="POST">
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
               <div>
                 <label style="display: block; font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.5rem;">Your Name</label>
-                <input type="text" required placeholder="Jane Doe" style="width: 100%; padding: 0.75rem 1rem; background: rgba(9, 13, 22, 0.8); border: 1px solid var(--border-light); border-radius: var(--radius-sm); color: #fff; font-family: var(--font-body);">
+                <input type="text" name="name" required placeholder="Jane Doe" style="width: 100%; padding: 0.75rem 1rem; background: rgba(9, 13, 22, 0.8); border: 1px solid var(--border-light); border-radius: var(--radius-sm); color: #fff; font-family: var(--font-body);">
               </div>
               <div>
                 <label style="display: block; font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.5rem;">Email Address</label>
-                <input type="email" required placeholder="jane@example.com" style="width: 100%; padding: 0.75rem 1rem; background: rgba(9, 13, 22, 0.8); border: 1px solid var(--border-light); border-radius: var(--radius-sm); color: #fff; font-family: var(--font-body);">
+                <input type="email" name="email" required placeholder="jane@example.com" style="width: 100%; padding: 0.75rem 1rem; background: rgba(9, 13, 22, 0.8); border: 1px solid var(--border-light); border-radius: var(--radius-sm); color: #fff; font-family: var(--font-body);">
               </div>
             </div>
 
             <div style="margin-bottom: 1.5rem;">
               <label style="display: block; font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.5rem;">How would you like to get involved?</label>
-              <select style="width: 100%; padding: 0.75rem 1rem; background: rgba(9, 13, 22, 0.8); border: 1px solid var(--border-light); border-radius: var(--radius-sm); color: #fff; font-family: var(--font-body);">
-                <option>Teach/Assist Language + Theatre or Language + Dance</option>
-                <option>Participate as a Cultural Artist in Art Expos</option>
-                <option>Organize or Chaperone Immersion Trips</option>
-                <option>General Support / Volunteering</option>
+              <select name="interest" style="width: 100%; padding: 0.75rem 1rem; background: rgba(9, 13, 22, 0.8); border: 1px solid var(--border-light); border-radius: var(--radius-sm); color: #fff; font-family: var(--font-body);">
+                <option value="Language + Theatre / Dance Teaching">Teach/Assist Language + Theatre or Language + Dance</option>
+                <option value="Cultural Artist Participation">Participate as a Cultural Artist in Art Expos</option>
+                <option value="Immersion Trip Chaperone / Organizer">Organize or Chaperone Immersion Trips</option>
+                <option value="General Support / Volunteering">General Support / Volunteering</option>
               </select>
             </div>
 
             <div style="margin-bottom: 2rem;">
               <label style="display: block; font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.5rem;">Your Message</label>
-              <textarea rows="4" required placeholder="Tell us about your background, language skills, or how you'd like to collaborate..." style="width: 100%; padding: 0.75rem 1rem; background: rgba(9, 13, 22, 0.8); border: 1px solid var(--border-light); border-radius: var(--radius-sm); color: #fff; font-family: var(--font-body); resize: vertical;"></textarea>
+              <textarea name="message" rows="4" required placeholder="Tell us about your background, language skills, or how you'd like to collaborate..." style="width: 100%; padding: 0.75rem 1rem; background: rgba(9, 13, 22, 0.8); border: 1px solid var(--border-light); border-radius: var(--radius-sm); color: #fff; font-family: var(--font-body); resize: vertical;"></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message to cici.socido@gmail.com</button>
           </form>
         </div>
       </div>
