@@ -108,7 +108,12 @@
         </div>
 
         <div class="glass-card" style="padding: 2.5rem;">
-          <form action="https://formspree.io/f/cici.socido@gmail.com" method="POST">
+          <form action="https://formsubmit.co/cici.socido@gmail.com" method="POST">
+            <!-- FormSubmit Configuration -->
+            <input type="hidden" name="_subject" value="New Inquiry from socido.org">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
               <div>
                 <label style="display: block; font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.5rem;">Your Name</label>
@@ -135,7 +140,7 @@
               <textarea name="message" rows="4" required placeholder="Tell us about your background, language skills, or how you'd like to collaborate..." style="width: 100%; padding: 0.75rem 1rem; background: rgba(9, 13, 22, 0.8); border: 1px solid var(--border-light); border-radius: var(--radius-sm); color: #fff; font-family: var(--font-body); resize: vertical;"></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message to cici.socido@gmail.com</button>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
           </form>
         </div>
       </div>
