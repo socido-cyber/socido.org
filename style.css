@@ -335,6 +335,74 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
+   Photo Gallery Grid & Subfolder Clusters
+   ========================================================================== */
+.gallery-cluster {
+  margin-bottom: 3.5rem;
+}
+
+.cluster-title {
+  font-size: 1.4rem;
+  color: var(--text-heading);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  border-bottom: 2px solid var(--border-light);
+  padding-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.75rem;
+}
+
+.gallery-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.gallery-card-thumb {
+  height: 220px;
+  overflow: hidden;
+  background: var(--bg-subtle);
+}
+
+.gallery-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-card:hover .gallery-card-thumb img {
+  transform: scale(1.06);
+}
+
+.gallery-caption {
+  padding: 0.85rem 1rem;
+  font-size: 0.925rem;
+  font-weight: 600;
+  color: var(--text-heading);
+  text-align: center;
+  background: #ffffff;
+  border-top: 1px solid var(--border-light);
+}
+
+/* ==========================================================================
    Donation Box (Zelle Info)
    ========================================================================== */
 .donation-box {
@@ -435,47 +503,6 @@ h1, h2, h3, h4, h5, h6 {
   outline: none;
   border-color: var(--border-focus);
   box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.15);
-}
-
-/* ==========================================================================
-   Photo Gallery Grid
-   ========================================================================== */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.gallery-item {
-  position: relative;
-  border-radius: var(--radius-sm);
-  overflow: hidden;
-  height: 220px;
-  background: var(--bg-subtle);
-  border: 1px solid var(--border-light);
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.gallery-placeholder {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-muted);
-  font-size: 0.9rem;
-  gap: 0.5rem;
-  background: #f1f5f9;
-  border: 2px dashed #cbd5e1;
-  border-radius: var(--radius-sm);
-  padding: 1.5rem;
-  text-align: center;
 }
 
 /* Footer */
