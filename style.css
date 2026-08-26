@@ -273,12 +273,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   Project Boxes Grid
+   Project Boxes Grid — Balanced 2x2 Layout
    ========================================================================== */
-.projects-grid {
+.projects-grid-2x2 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
 }
 
 .project-box {
@@ -299,7 +299,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .project-thumb {
-  height: 220px;
+  height: 230px;
   overflow: hidden;
 }
 
@@ -315,21 +315,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .project-body {
-  padding: 1.75rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
 .project-body h3 {
-  font-size: 1.35rem;
-  margin-bottom: 0.75rem;
+  font-size: 1.4rem;
+  margin-bottom: 0.85rem;
 }
 
 .project-body p {
   color: var(--text-muted);
-  font-size: 0.975rem;
-  margin-bottom: 1.5rem;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  margin-bottom: 1.75rem;
   flex-grow: 1;
 }
 
@@ -437,7 +438,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   Photo Gallery Grid (For Project Detail Pages)
+   Photo Gallery Grid
    ========================================================================== */
 .gallery-grid {
   display: grid;
@@ -473,6 +474,8 @@ h1, h2, h3, h4, h5, h6 {
   background: #f1f5f9;
   border: 2px dashed #cbd5e1;
   border-radius: var(--radius-sm);
+  padding: 1.5rem;
+  text-align: center;
 }
 
 /* Footer */
@@ -490,6 +493,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Responsive */
+@media (max-width: 992px) {
+  .projects-grid-2x2 {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-vision h1 {
     font-size: 2rem;
