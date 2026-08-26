@@ -2,7 +2,7 @@
    Socido Website — Bright, Trustworthy & Educational Design System
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&family=Ma+Shan+Zheng&display=swap');
 
 :root {
   /* Color Palette — Bright, Warm & Trustworthy */
@@ -127,13 +127,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   Header & Navigation
+   Header & Navigation — Ink Marked "O" Logo & "Socido World Cultures"
    ========================================================================== */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-light);
@@ -153,21 +153,33 @@ h1, h2, h3, h4, h5, h6 {
   gap: 0.75rem;
   font-family: var(--font-heading);
   font-weight: 800;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   color: var(--text-heading);
 }
 
+/* Ink Marked "O" Logo Badge */
 .logo-badge {
-  width: 40px;
-  height: 40px;
-  background: var(--primary);
-  border-radius: 10px;
+  width: 42px;
+  height: 42px;
+  background: radial-gradient(circle at 30% 30%, #0d9488 0%, #0f766e 100%);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
-  font-weight: 800;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 900;
   color: #ffffff;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.4), 0 4px 10px rgba(13, 148, 136, 0.25);
+  position: relative;
+}
+
+.logo-badge::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  border: 2px dashed rgba(13, 148, 136, 0.5);
 }
 
 .nav-menu {
@@ -405,7 +417,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   Donation Box (Zelle Info)
+   Donation Box (Zelle Info & Designation Select)
    ========================================================================== */
 .donation-box {
   background: #ffffff;
@@ -443,6 +455,31 @@ h1, h2, h3, h4, h5, h6 {
   margin: 1rem 0;
   user-select: all;
   border: 1px dashed var(--primary);
+}
+
+.donation-select-group {
+  max-width: 500px;
+  margin: 1.5rem auto 1rem auto;
+  text-align: left;
+}
+
+.donation-select-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-heading);
+  margin-bottom: 0.4rem;
+}
+
+.donation-select-group select {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-heading);
 }
 
 /* ==========================================================================
@@ -507,18 +544,33 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.15);
 }
 
-/* Footer */
+/* ==========================================================================
+   Footer — 501(c)(3) Non-Profit Status
+   ========================================================================== */
 .site-footer {
   margin-top: auto;
   background: var(--text-heading);
   color: #94a3b8;
-  padding: 2.5rem 0;
+  padding: 3rem 0 2.5rem 0;
   font-size: 0.9rem;
   text-align: center;
 }
 
 .site-footer a {
   color: #f8fafc;
+}
+
+.nonprofit-disclaimer {
+  max-width: 820px;
+  margin: 1.5rem auto 1.25rem auto;
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  color: #cbd5e1;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  text-align: center;
 }
 
 /* Responsive */

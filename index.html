@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Socido — Connecting communities. Celebrating heritage. Empowering youth.</title>
-  <meta name="description" content="Socido (socido.org) connects communities, celebrates heritage, and empowers youth through free language & arts classes, cultural immersion trips, cross-cultural art events, and school cultural days.">
+  <title>Socido World Cultures — Connecting communities. Celebrating heritage. Empowering youth.</title>
+  <meta name="description" content="Socido World Cultures (socido.org) is a 501(c)(3) non-profit connecting communities, celebrating heritage, and empowering youth through free language & arts classes, cultural immersion trips, cross-cultural art events, and school cultural days. EIN: 42-1936387.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,8 +13,8 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand-logo">
-        <div class="logo-badge">S</div>
-        <span>Socido</span>
+        <div class="logo-badge">O</div>
+        <span>Socido World Cultures</span>
       </a>
 
       <nav>
@@ -124,16 +124,28 @@
       </div>
     </section>
 
-    <!-- Donation Box (Zelle Info) -->
+    <!-- Donation Box (Zelle Info & Program Designation Dropdown) -->
     <section class="section" id="donate">
       <div class="container">
         <div class="donation-box">
           <div class="zelle-badge">💚 Direct Zelle Donation</div>
           <h2 style="font-size: 2rem; margin-bottom: 0.5rem;">Support Our Cause</h2>
-          <p style="color: var(--text-muted); max-width: 620px; margin: 0 auto;">Help us keep introductory language classes free, subsidize travel costs for students, and support local school cultural celebrations.</p>
-          
+          <p style="color: var(--text-muted); max-width: 620px; margin: 0 auto;">Your tax-deductible contribution directly funds free youth language classes, art event supplies, and trip scholarships.</p>
+
+          <!-- Contribution Purpose Dropdown (Optional Choice Included) -->
+          <div class="donation-select-group">
+            <label for="donationPurpose">Designate Your Contribution (Optional):</label>
+            <select id="donationPurpose">
+              <option value="">General Mission Fund (No specific preference)</option>
+              <option value="Language & Creative Arts">Language & Creative Arts (Free Classes & Theatre Camps)</option>
+              <option value="Cultural Immersion Trips">Cultural Immersion Trips (Youth Travel Scholarships)</option>
+              <option value="Cross-Cultural Art Events">Cross-Cultural Art Events & Exhibitions</option>
+              <option value="School & Community Cultural Days">School & Community Cultural Days</option>
+            </select>
+          </div>
+
           <div style="margin-top: 1.5rem;">
-            <span style="font-size: 0.9rem; color: var(--text-muted); display: block;">Send Zelle payments to our organization:</span>
+            <span style="font-size: 0.9rem; color: var(--text-muted); display: block;">Send Zelle payments to our organization ID:</span>
             <div class="zelle-handle">socido-world-cultures</div>
           </div>
           
@@ -181,11 +193,11 @@
             <div class="form-group">
               <label>Program / Interest</label>
               <select name="interest">
+                <option value="General Support / Volunteering">General Support / Volunteering</option>
                 <option value="Language & Creative Arts">Language & Creative Arts</option>
                 <option value="Cultural Immersion Trips">Cultural Immersion Trips</option>
                 <option value="Cross-Cultural Art Events">Cross-Cultural Art Events</option>
                 <option value="School & Community Cultural Days">School & Community Cultural Days</option>
-                <option value="General Support / Volunteering">General Support / Volunteering</option>
               </select>
             </div>
 
@@ -201,10 +213,16 @@
     </section>
   </main>
 
-  <!-- Footer -->
+  <!-- Footer with 501(c)(3) Non-Profit Status -->
   <footer class="site-footer">
     <div class="container">
-      <p style="margin-bottom: 0.5rem; font-weight: 600;">Socido (socido-world-cultures)</p>
+      <p style="margin-bottom: 0.5rem; font-weight: 700; font-size: 1.1rem; color: #ffffff;">Socido World Cultures</p>
+      
+      <!-- 501(c)(3) Disclaimer Paragraph -->
+      <div class="nonprofit-disclaimer">
+        Socido World Cultures is a registered 501(c)(3) tax-exempt non-profit organization. Your generous, tax-deductible contributions directly fund our mission. For your records and tax purposes, our Employer Identification Number (EIN) is 42-1936387. A copy of our official IRS determination letter is available upon request.
+      </div>
+
       <p style="color: #94a3b8; font-size: 0.85rem;">Connecting communities. Celebrating heritage. Empowering youth. | Phone: (503) 985-6575</p>
       <p style="color: #64748b; font-size: 0.8rem; margin-top: 1rem;">&copy; 2026 socido.org. Hosted on GitHub Pages.</p>
     </div>
