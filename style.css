@@ -335,7 +335,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   Photo Gallery Grid & Subfolder Clusters
+   Photo Gallery Grid — Complete Image Preservation (No Face Cropping)
    ========================================================================== */
 .gallery-cluster {
   margin-bottom: 3.5rem;
@@ -355,8 +355,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.75rem;
+  align-items: start;
 }
 
 .gallery-card {
@@ -376,20 +377,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .gallery-card-thumb {
-  height: 220px;
-  overflow: hidden;
+  width: 100%;
   background: var(--bg-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  min-height: 200px;
 }
 
 .gallery-card-thumb img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.gallery-card:hover .gallery-card-thumb img {
-  transform: scale(1.06);
+  height: auto;
+  max-height: 480px;
+  object-fit: contain;
+  border-radius: 4px;
 }
 
 .gallery-caption {
