@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Subtle Round Badge Background -->
+  <circle cx="100" cy="100" r="88" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- Perfectly Symmetrical Trunk & Branches in Slate-Charcoal (#1E293B) -->
+  <!-- Base Trunk -->
+  <path d="M 95 168 C 95 125, 96 110, 100 95 C 104 110, 105 125, 105 168 C 102 165, 98 165, 95 168 Z" fill="#1E293B"/>
+  
+  <!-- Left Mirrored Lower Branch -->
+  <path d="M 98 120 C 75 118, 55 132, 48 140" fill="none" stroke="#1E293B" stroke-width="7" stroke-linecap="round"/>
+  <!-- Right Mirrored Lower Branch -->
+  <path d="M 102 120 C 125 118, 145 132, 152 140" fill="none" stroke="#1E293B" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- Left Mirrored Mid Branch -->
+  <path d="M 99 100 C 72 90, 58 72, 54 58" fill="none" stroke="#1E293B" stroke-width="7" stroke-linecap="round"/>
+  <!-- Right Mirrored Mid Branch -->
+  <path d="M 101 100 C 128 90, 142 72, 146 58" fill="none" stroke="#1E293B" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- Center Top Branch Stem -->
+  <path d="M 100 95 L 100 52" stroke="#1E293B" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- Colorful Mirrored Canopy Fruit/Leaves (5 Symmetrical Cultural Colors) -->
+  <!-- Lower Left: Emerald Jade (#10B981) -->
+  <circle cx="48" cy="140" r="18" fill="#10B981"/>
+  <circle cx="48" cy="140" r="7" fill="#ffffff" opacity="0.6"/>
+
+  <!-- Lower Right: Amber Sun (#F59E0B) -->
+  <circle cx="152" cy="140" r="18" fill="#F59E0B"/>
+  <circle cx="152" cy="140" r="7" fill="#ffffff" opacity="0.6"/>
+
+  <!-- Upper Left: Ocean Azure (#0EA5E9) -->
+  <circle cx="54" cy="58" r="21" fill="#0EA5E9"/>
+  <circle cx="54" cy="58" r="8" fill="#ffffff" opacity="0.6"/>
+
+  <!-- Upper Right: Coral Rose (#F43F5E) -->
+  <circle cx="146" cy="58" r="21" fill="#F43F5E"/>
+  <circle cx="146" cy="58" r="8" fill="#ffffff" opacity="0.6"/>
+
+  <!-- Crown Center Blossom: Royal Violet (#8B5CF6) -->
+  <circle cx="100" cy="40" r="24" fill="#8B5CF6"/>
+  <circle cx="100" cy="40" r="10" fill="#ffffff" opacity="0.7"/>
+
+  <!-- Grounding Baseline -->
+  <path d="M 75 168 C 90 165, 110 165, 125 168" stroke="#1E293B" stroke-width="4" stroke-linecap="round" fill="none"/>
+</svg>

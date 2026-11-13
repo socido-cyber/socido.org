@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <!-- Single Petal Definition centered vertically at top -->
+    <path id="petal-shape" d="M 100 16 C 122 16, 142 36, 142 62 C 142 88, 120 98, 100 98 C 80 98, 58 88, 58 62 C 58 36, 78 16, 100 16 Z" />
+  </defs>
+
+  <!-- 4 Symmetrical Petals in 4 Bright Colors -->
+  <!-- North: Golden Sun (#F59E0B) -->
+  <use href="#petal-shape" fill="#F59E0B" />
+
+  <!-- East: Coral Rose (#F43F5E) -->
+  <use href="#petal-shape" fill="#F43F5E" transform="rotate(90 100 100)" />
+
+  <!-- South: Emerald Jade (#10B981) -->
+  <use href="#petal-shape" fill="#10B981" transform="rotate(180 100 100)" />
+
+  <!-- West: Ocean Azure (#0EA5E9) -->
+  <use href="#petal-shape" fill="#0EA5E9" transform="rotate(270 100 100)" />
+
+  <!-- Overlapping Diamond Harmonies at 45 degree angles -->
+  <circle cx="128" cy="72" r="9" fill="#F43F5E" opacity="0.9"/>
+  <circle cx="128" cy="128" r="9" fill="#10B981" opacity="0.9"/>
+  <circle cx="72" cy="128" r="9" fill="#0EA5E9" opacity="0.9"/>
+  <circle cx="72" cy="72" r="9" fill="#F59E0B" opacity="0.9"/>
+
+  <!-- Cheerful Central Sun Circle -->
+  <circle cx="100" cy="100" r="22" fill="#ffffff" />
+  <circle cx="100" cy="100" r="16" fill="#8B5CF6" />
+  <circle cx="100" cy="100" r="6" fill="#ffffff" />
+</svg>

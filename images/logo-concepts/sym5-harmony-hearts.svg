@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Outer Soft Circle -->
+  <circle cx="100" cy="100" r="88" fill="#fffbeb" opacity="0.6"/>
+
+  <!-- 4 Symmetrical Heart-Leaves facing inward -->
+  <!-- Top: Coral Rose (#F43F5E) -->
+  <path d="M 100 95 C 100 68, 72 45, 82 28 C 92 12, 108 12, 118 28 C 128 45, 100 68, 100 95 Z" fill="#F43F5E"/>
+  
+  <!-- Right: Amber Gold (#F59E0B) -->
+  <path d="M 100 95 C 100 68, 72 45, 82 28 C 92 12, 108 12, 118 28 C 128 45, 100 68, 100 95 Z" fill="#F59E0B" transform="rotate(90 100 100)"/>
+
+  <!-- Bottom: Emerald Jade (#10B981) -->
+  <path d="M 100 95 C 100 68, 72 45, 82 28 C 92 12, 108 12, 118 28 C 128 45, 100 68, 100 95 Z" fill="#10B981" transform="rotate(180 100 100)"/>
+
+  <!-- Left: Ocean Azure (#0EA5E9) -->
+  <path d="M 100 95 C 100 68, 72 45, 82 28 C 92 12, 108 12, 118 28 C 128 45, 100 68, 100 95 Z" fill="#0EA5E9" transform="rotate(270 100 100)"/>
+
+  <!-- Center Golden Unity Star -->
+  <circle cx="100" cy="100" r="18" fill="#ffffff" />
+  <circle cx="100" cy="100" r="12" fill="#8B5CF6" />
+  <circle cx="100" cy="100" r="5" fill="#F59E0B" />
+</svg>
