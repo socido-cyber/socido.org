@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <path id="ray" d="M 100 22 C 112 22, 118 38, 114 54 C 110 70, 100 84, 100 84 C 100 84, 90 70, 86 54 C 82 38, 88 22, 100 22 Z" />
+  </defs>
+
+  <use href="#ray" fill="#FBBF24" /> <!-- 0: Warm Gold -->
+  <use href="#ray" fill="#F97316" transform="rotate(45 100 100)" /> <!-- 45: Tangerine -->
+  <use href="#ray" fill="#EF4444" transform="rotate(90 100 100)" /> <!-- 90: Coral Red -->
+  <use href="#ray" fill="#A855F7" transform="rotate(135 100 100)" /> <!-- 135: Royal Orchid -->
+  <use href="#ray" fill="#3B82F6" transform="rotate(180 100 100)" /> <!-- 180: Sky Blue -->
+  <use href="#ray" fill="#06B6D4" transform="rotate(225 100 100)" /> <!-- 225: Teal Turquoise -->
+  <use href="#ray" fill="#10B981" transform="rotate(270 100 100)" /> <!-- 270: Emerald -->
+  <use href="#ray" fill="#84CC16" transform="rotate(315 100 100)" /> <!-- 315: Lime Leaf -->
+
+  <!-- Center Sun -->
+  <circle cx="100" cy="100" r="30" fill="#ffffff" />
+  <circle cx="100" cy="100" r="23" fill="#FBBF24" />
+  <circle cx="100" cy="100" r="14" fill="#ffffff" />
+  <circle cx="100" cy="100" r="8" fill="#F97316" />
+</svg>

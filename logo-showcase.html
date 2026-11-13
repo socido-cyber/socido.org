@@ -3,85 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Symmetrical & Colorful Logo Concepts — Socido World Cultures</title>
+  <title>Concept 3 Color Tuning Studio — Socido World Cultures</title>
   <link rel="stylesheet" href="style.css?v=7">
   <style>
-    :root {
-      --color-gold: #F59E0B;
-      --color-coral: #F43F5E;
-      --color-azure: #0EA5E9;
-      --color-jade: #10B981;
-      --color-violet: #8B5CF6;
-    }
-    
-    .color-palette-bar {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-      gap: 1rem;
-      margin: 2.5rem 0 3.5rem 0;
-    }
-
-    .swatch-card {
-      background: #ffffff;
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius-md);
-      padding: 1.25rem;
-      box-shadow: var(--shadow-card);
+    .studio-header {
       text-align: center;
-      transition: transform 0.2s ease;
+      max-width: 800px;
+      margin: 0 auto 3rem auto;
     }
-    .swatch-card:hover {
-      transform: translateY(-4px);
-    }
-    .swatch-circle {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      margin: 0 auto 0.75rem auto;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-    }
-    .swatch-name {
-      font-weight: 700;
-      font-size: 0.95rem;
-      color: var(--text-heading);
-      margin-bottom: 0.2rem;
-    }
-    .swatch-code {
-      font-family: monospace;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-    .swatch-role {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      margin-top: 0.35rem;
-      line-height: 1.35;
-    }
-
-    .concept-grid {
+    .variation-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2.25rem;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2rem;
+      margin-bottom: 4rem;
     }
-
-    .concept-card {
+    .var-card {
       background: #ffffff;
       border: 1px solid var(--border-light);
       border-radius: var(--radius-md);
-      padding: 2.5rem 2rem;
+      padding: 2.25rem 2rem;
       box-shadow: var(--shadow-card);
       transition: var(--transition);
       display: flex;
       flex-direction: column;
       position: relative;
     }
-    .concept-card:hover {
+    .var-card:hover {
       transform: translateY(-5px);
       box-shadow: var(--shadow-hover);
-      border-color: rgba(14, 165, 233, 0.4);
+      border-color: #0ea5e9;
     }
-
-    .concept-preview-box {
+    .var-preview-box {
       background: #f8fafc;
       border: 1px solid #f1f5f9;
       border-radius: var(--radius-sm);
@@ -89,18 +41,31 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 1.5rem;
-      min-height: 180px;
+      margin-bottom: 1.25rem;
+      min-height: 200px;
     }
-    .concept-preview-box img {
-      width: 125px;
-      height: 125px;
+    .var-preview-box img {
+      width: 130px;
+      height: 130px;
       transition: transform 0.35s ease;
     }
-    .concept-card:hover .concept-preview-box img {
+    .var-card:hover .var-preview-box img {
       transform: scale(1.1);
     }
-
+    .palette-dots {
+      display: flex;
+      gap: 0.5rem;
+      margin: 0.75rem 0 1rem 0;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .p-dot {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 2px solid #ffffff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
     .header-preview-sample {
       background: #ffffff;
       border: 1px solid var(--border-light);
@@ -120,20 +85,54 @@
       height: 38px;
     }
 
-    .pill-tag {
-      display: inline-block;
-      padding: 0.25rem 0.75rem;
-      border-radius: 50px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-right: 0.35rem;
-      margin-bottom: 0.5rem;
+    /* Live Interactive Tuner */
+    .interactive-tuner-card {
+      background: #ffffff;
+      border: 2px solid #0ea5e9;
+      border-radius: var(--radius-md);
+      padding: 3rem 2.5rem;
+      box-shadow: var(--shadow-hover);
+      margin-top: 3rem;
     }
-    .pill-symmetry { background: #fdf4ff; color: #a21caf; }
-    .pill-cheerful { background: #fef3c7; color: #b45309; }
-    .pill-trust { background: #dcfce7; color: #15803d; }
+    .tuner-layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    @media (max-width: 768px) {
+      .tuner-layout {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+    .custom-svg-display {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f8fafc;
+      padding: 2rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid #e2e8f0;
+    }
+    .color-preset-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin: 0.25rem;
+      transition: all 0.2s ease;
+    }
+    .color-preset-btn:hover {
+      border-color: #0ea5e9;
+      background: #f0f9ff;
+    }
   </style>
 </head>
 <body style="background: #fafaf9;">
@@ -143,7 +142,7 @@
     <div class="container header-inner">
       <a href="index.html" class="brand-logo">
         <div class="logo-badge" id="demoLogoBadge">
-          <img src="images/logo-concepts/sym1-compass-bloom.svg" alt="Active Demo Logo" width="42" height="42">
+          <img src="images/logo-concepts/sym3-varA-harmony4.svg" alt="Active Demo Logo" width="44" height="44">
         </div>
         <span>Socido World Cultures</span>
       </a>
@@ -155,210 +154,224 @@
     <section class="section">
       <div class="container">
         
-        <!-- Header -->
-        <div class="section-header">
-          <span class="tag" style="background: rgba(14, 165, 233, 0.1); color: #0284c7;">Vibrant & Symmetrical Design Exploration</span>
-          <h1 style="font-size: 2.75rem; margin-top: 0.5rem; margin-bottom: 0.75rem;">Bright, Symmetrical Logo Concepts</h1>
-          <p>
-            Embodying <strong>perfect geometric symmetry</strong> (balance, unity, and harmony) rendered in a joyful <strong>5-color global palette</strong> representing diverse world cultures, celebration, and youth vitality.
+        <div class="studio-header">
+          <span class="tag" style="background: rgba(14, 165, 233, 0.1); color: #0284c7; padding: 0.35rem 1.25rem; border-radius: 50px; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Color Tuning Studio</span>
+          <h1 style="font-size: 2.75rem; margin-top: 0.75rem; margin-bottom: 0.75rem;">Concept 3: Radiant Sunburst</h1>
+          <p style="color: var(--text-muted); font-size: 1.15rem;">
+            You selected the <strong>Radiant Sunburst Pinwheel</strong> (8 symmetrical rays orbiting a cheerful center). Below are <strong>5 curated color harmonies</strong> exploring balanced symmetry, rich heritage tones, and vibrant multicultural palettes.
           </p>
         </div>
 
-        <!-- 5 Bright Color Palette Swatches -->
-        <h2 style="font-size: 1.5rem; text-align: center; margin-bottom: 0.5rem;">5 Bright World-Cultures Colors</h2>
-        <p style="text-align: center; color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">A rich, uplifting palette celebrating diversity, growth, and community.</p>
+        <!-- 5 Curated Color Tunings -->
+        <div class="variation-grid">
 
-        <div class="color-palette-bar">
-          <!-- Color 1: Gold -->
-          <div class="swatch-card">
-            <div class="swatch-circle" style="background: #F59E0B;"></div>
-            <div class="swatch-name">Sunbeam Gold</div>
-            <div class="swatch-code">#F59E0B</div>
-            <div class="swatch-role">Warmth, optimism, youthful joy & curiosity</div>
-          </div>
-          <!-- Color 2: Coral -->
-          <div class="swatch-card">
-            <div class="swatch-circle" style="background: #F43F5E;"></div>
-            <div class="swatch-name">Coral Blossom</div>
-            <div class="swatch-code">#F43F5E</div>
-            <div class="swatch-role">Celebration, heritage, love of community</div>
-          </div>
-          <!-- Color 3: Azure -->
-          <div class="swatch-card">
-            <div class="swatch-circle" style="background: #0EA5E9;"></div>
-            <div class="swatch-name">Ocean Azure</div>
-            <div class="swatch-code">#0EA5E9</div>
-            <div class="swatch-role">Global bridges, open horizons & trust</div>
-          </div>
-          <!-- Color 4: Jade -->
-          <div class="swatch-card">
-            <div class="swatch-circle" style="background: #10B981;"></div>
-            <div class="swatch-name">Spring Jade</div>
-            <div class="swatch-code">#10B981</div>
-            <div class="swatch-role">Youth vitality, learning & natural growth</div>
-          </div>
-          <!-- Color 5: Violet -->
-          <div class="swatch-card">
-            <div class="swatch-circle" style="background: #8B5CF6;"></div>
-            <div class="swatch-name">Royal Iris</div>
-            <div class="swatch-code">#8B5CF6</div>
-            <div class="swatch-role">Creative arts, theater & cultural imagination</div>
-          </div>
-        </div>
-
-        <!-- 5 Symmetrical Logo Concepts -->
-        <h2 style="font-size: 1.85rem; text-align: center; margin-bottom: 2rem;">5 Symmetrical Design Directions</h2>
-
-        <div class="concept-grid">
-
-          <!-- Concept 1: The Cultural Compass Bloom -->
-          <div class="concept-card">
-            <span style="font-size: 0.85rem; font-weight: 700; color: #0284c7; text-transform: uppercase; margin-bottom: 0.5rem;">Concept 1</span>
-            <h3 style="font-size: 1.45rem; margin-bottom: 0.75rem;">The Cultural Compass</h3>
-            <div class="concept-preview-box">
-              <img src="images/logo-concepts/sym1-compass-bloom.svg" alt="Concept 1 - Cultural Compass">
-            </div>
+          <!-- Variation 3A: Global Harmony Quartet -->
+          <div class="var-card">
+            <span style="font-size: 0.85rem; font-weight: 700; color: #0284c7; text-transform: uppercase;">Palette 3A</span>
+            <h3 style="font-size: 1.45rem; margin: 0.35rem 0 0.5rem 0;">Global Harmony Quartet</h3>
             
-            <div>
-              <span class="pill-tag pill-symmetry">⚖️ 4-Fold Radial Symmetry</span>
-              <span class="pill-tag pill-cheerful">☀️ Cheerful</span>
-              <span class="pill-tag pill-trust">🤝 Balanced</span>
+            <div class="var-preview-box">
+              <img src="images/logo-concepts/sym3-varA-harmony4.svg" alt="Variation 3A">
             </div>
 
-            <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.65; margin-top: 0.5rem;">
-              Four identical petals pointing in the cardinal directions (North, East, South, West) meeting at a central sun core. Symbolizes youth and traditions from the four corners of the globe converging in joyful unity.
+            <div class="palette-dots">
+              <div class="p-dot" style="background: #F59E0B;" title="Sunbeam Gold #F59E0B"></div>
+              <div class="p-dot" style="background: #F43F5E;" title="Coral Rose #F43F5E"></div>
+              <div class="p-dot" style="background: #0284C7;" title="Ocean Blue #0284C7"></div>
+              <div class="p-dot" style="background: #10B981;" title="Emerald Jade #10B981"></div>
+            </div>
+
+            <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.65;">
+              <strong>Balanced Mirrored Pairs:</strong> 4 colors each appear exactly twice in 180° opposite symmetry (Gold tops and bottoms; Blue flanks left and right; Coral and Jade cross diagonally). Clean, balanced, and joyful.
             </p>
 
             <div style="margin-top: auto;">
-              <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">In Header Context:</span>
+              <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">In Header:</span>
               <div class="header-preview-sample">
-                <img src="images/logo-concepts/sym1-compass-bloom.svg" alt="Preview">
+                <img src="images/logo-concepts/sym3-varA-harmony4.svg" alt="Preview">
                 <span>Socido World Cultures</span>
               </div>
-              <button class="btn btn-outline" style="width: 100%; padding: 0.5rem;" onclick="setDemoLogo('images/logo-concepts/sym1-compass-bloom.svg')">Preview in Top Header &uarr;</button>
+              <button class="btn btn-outline" style="width: 100%; padding: 0.55rem;" onclick="setDemoLogo('images/logo-concepts/sym3-varA-harmony4.svg')">Preview in Top Header &uarr;</button>
             </div>
           </div>
 
-          <!-- Concept 2: The Unity Clover Ring -->
-          <div class="concept-card">
-            <span style="font-size: 0.85rem; font-weight: 700; color: #0284c7; text-transform: uppercase; margin-bottom: 0.5rem;">Concept 2</span>
-            <h3 style="font-size: 1.45rem; margin-bottom: 0.75rem;">The Unity Clover Ring</h3>
-            <div class="concept-preview-box">
-              <img src="images/logo-concepts/sym2-unity-clover.svg" alt="Concept 2 - Unity Clover">
+          <!-- Variation 3B: Continuous Chromatic Spectrum -->
+          <div class="var-card">
+            <span style="font-size: 0.85rem; font-weight: 700; color: #0284c7; text-transform: uppercase;">Palette 3B</span>
+            <h3 style="font-size: 1.45rem; margin: 0.35rem 0 0.5rem 0;">Chromatic Spectrum Wheel</h3>
+
+            <div class="var-preview-box">
+              <img src="images/logo-concepts/sym3-varB-spectrum8.svg" alt="Variation 3B">
             </div>
 
-            <div>
-              <span class="pill-tag pill-symmetry">⚖️ Interlocking Radial Symmetry</span>
-              <span class="pill-tag pill-cheerful">🍀 Cheerful</span>
-              <span class="pill-tag pill-trust">♾️ Everlasting</span>
+            <div class="palette-dots">
+              <div class="p-dot" style="background: #FBBF24;"></div>
+              <div class="p-dot" style="background: #F97316;"></div>
+              <div class="p-dot" style="background: #EF4444;"></div>
+              <div class="p-dot" style="background: #A855F7;"></div>
+              <div class="p-dot" style="background: #3B82F6;"></div>
+              <div class="p-dot" style="background: #06B6D4;"></div>
+              <div class="p-dot" style="background: #10B981;"></div>
+              <div class="p-dot" style="background: #84CC16;"></div>
             </div>
 
-            <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.65; margin-top: 0.5rem;">
-              Four continuous, overlapping circular ribbons in vibrant Coral, Amber, Jade, and Azure forming an unbroken four-leaf clover of hope and connection. Minimalist, modern, and instantly iconic.
+            <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.65;">
+              <strong>Smooth Cultural Rainbow:</strong> A harmonious progression from warm sunbeam yellow & orange through festival crimson, orchid purple, ocean azure, turquoise, and lush spring green. Celebrates the full spectrum of world cultures.
             </p>
 
             <div style="margin-top: auto;">
-              <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">In Header Context:</span>
+              <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">In Header:</span>
               <div class="header-preview-sample">
-                <img src="images/logo-concepts/sym2-unity-clover.svg" alt="Preview">
+                <img src="images/logo-concepts/sym3-varB-spectrum8.svg" alt="Preview">
                 <span>Socido World Cultures</span>
               </div>
-              <button class="btn btn-outline" style="width: 100%; padding: 0.5rem;" onclick="setDemoLogo('images/logo-concepts/sym2-unity-clover.svg')">Preview in Top Header &uarr;</button>
+              <button class="btn btn-outline" style="width: 100%; padding: 0.55rem;" onclick="setDemoLogo('images/logo-concepts/sym3-varB-spectrum8.svg')">Preview in Top Header &uarr;</button>
             </div>
           </div>
 
-          <!-- Concept 3: The Radiant Sunburst Pinwheel -->
-          <div class="concept-card">
-            <span style="font-size: 0.85rem; font-weight: 700; color: #0284c7; text-transform: uppercase; margin-bottom: 0.5rem;">Concept 3</span>
-            <h3 style="font-size: 1.45rem; margin-bottom: 0.75rem;">The Radiant Sunburst</h3>
-            <div class="concept-preview-box">
-              <img src="images/logo-concepts/sym3-radiant-sun.svg" alt="Concept 3 - Radiant Sun">
+          <!-- Variation 3C: Refined Heritage -->
+          <div class="var-card">
+            <span style="font-size: 0.85rem; font-weight: 700; color: #0284c7; text-transform: uppercase;">Palette 3C</span>
+            <h3 style="font-size: 1.45rem; margin: 0.35rem 0 0.5rem 0;">Refined Heritage</h3>
+
+            <div class="var-preview-box">
+              <img src="images/logo-concepts/sym3-varC-refined.svg" alt="Variation 3C">
             </div>
 
-            <div>
-              <span class="pill-tag pill-symmetry">⚖️ 8-Ray Circular Symmetry</span>
-              <span class="pill-tag pill-cheerful">✨ High Energy</span>
-              <span class="pill-tag pill-trust">☀️ Optimistic</span>
+            <div class="palette-dots">
+              <div class="p-dot" style="background: #D97706;"></div>
+              <div class="p-dot" style="background: #E11D48;"></div>
+              <div class="p-dot" style="background: #7C3AED;"></div>
+              <div class="p-dot" style="background: #0284C7;"></div>
+              <div class="p-dot" style="background: #059669;"></div>
             </div>
 
-            <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.65; margin-top: 0.5rem;">
-              Eight playful, radiating teardrop rays in a dynamic pinwheel orbit around a cheerful center beacon. Radiates warmth, childhood curiosity, festival energy, and multicultural celebration.
+            <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.65;">
+              <strong>High-Trust Institutional Hues:</strong> Slightly deeper, richer tones—deep golden saffron, royal terracotta rose, rich violet, Mediterranean blue, and forest jade. Sophisticated, authoritative, and deeply grounded.
             </p>
 
             <div style="margin-top: auto;">
-              <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">In Header Context:</span>
+              <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">In Header:</span>
               <div class="header-preview-sample">
-                <img src="images/logo-concepts/sym3-radiant-sun.svg" alt="Preview">
+                <img src="images/logo-concepts/sym3-varC-refined.svg" alt="Preview">
                 <span>Socido World Cultures</span>
               </div>
-              <button class="btn btn-outline" style="width: 100%; padding: 0.5rem;" onclick="setDemoLogo('images/logo-concepts/sym3-radiant-sun.svg')">Preview in Top Header &uarr;</button>
+              <button class="btn btn-outline" style="width: 100%; padding: 0.55rem;" onclick="setDemoLogo('images/logo-concepts/sym3-varC-refined.svg')">Preview in Top Header &uarr;</button>
             </div>
           </div>
 
-          <!-- Concept 4: Symmetrical Tree of Cultures -->
-          <div class="concept-card">
-            <span style="font-size: 0.85rem; font-weight: 700; color: #0284c7; text-transform: uppercase; margin-bottom: 0.5rem;">Concept 4</span>
-            <h3 style="font-size: 1.45rem; margin-bottom: 0.75rem;">Symmetrical Tree of Cultures</h3>
-            <div class="concept-preview-box">
-              <img src="images/logo-concepts/sym4-symmetrical-tree.svg" alt="Concept 4 - Symmetrical Tree">
+          <!-- Variation 3D: Sun & Earth Greens -->
+          <div class="var-card">
+            <span style="font-size: 0.85rem; font-weight: 700; color: #0284c7; text-transform: uppercase;">Palette 3D</span>
+            <h3 style="font-size: 1.45rem; margin: 0.35rem 0 0.5rem 0;">Sun & Organic Greens</h3>
+
+            <div class="var-preview-box">
+              <img src="images/logo-concepts/sym3-varD-nature-sun.svg" alt="Variation 3D">
             </div>
 
-            <div>
-              <span class="pill-tag pill-symmetry">⚖️ Bilateral Mirror Symmetry</span>
-              <span class="pill-tag pill-cheerful">🌳 Organic & Playful</span>
-              <span class="pill-tag pill-trust">🏛️ Rooted Heritage</span>
+            <div class="palette-dots">
+              <div class="p-dot" style="background: #F59E0B;"></div>
+              <div class="p-dot" style="background: #10B981;"></div>
+              <div class="p-dot" style="background: #0284C7;"></div>
+              <div class="p-dot" style="background: #84CC16;"></div>
             </div>
 
-            <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.65; margin-top: 0.5rem;">
-              Evolves your letterhead tree into a perfectly balanced, mirrored Tree of Life. Symmetrical branches hold 5 vibrant circular fruits representing diverse cultures blossoming from common roots.
+            <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.65;">
+              <strong>Nature & Vitality:</strong> Connects to your letterhead tree heritage by alternating vibrant golden sunshine rays with fresh emerald, sunny lime, and clear sky azure. Radiant, fresh, and friendly.
             </p>
 
             <div style="margin-top: auto;">
-              <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">In Header Context:</span>
+              <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">In Header:</span>
               <div class="header-preview-sample">
-                <img src="images/logo-concepts/sym4-symmetrical-tree.svg" alt="Preview">
+                <img src="images/logo-concepts/sym3-varD-nature-sun.svg" alt="Preview">
                 <span>Socido World Cultures</span>
               </div>
-              <button class="btn btn-outline" style="width: 100%; padding: 0.5rem;" onclick="setDemoLogo('images/logo-concepts/sym4-symmetrical-tree.svg')">Preview in Top Header &uarr;</button>
+              <button class="btn btn-outline" style="width: 100%; padding: 0.55rem;" onclick="setDemoLogo('images/logo-concepts/sym3-varD-nature-sun.svg')">Preview in Top Header &uarr;</button>
             </div>
           </div>
 
-          <!-- Concept 5: The Harmony Hearts Blossom -->
-          <div class="concept-card">
-            <span style="font-size: 0.85rem; font-weight: 700; color: #0284c7; text-transform: uppercase; margin-bottom: 0.5rem;">Concept 5</span>
-            <h3 style="font-size: 1.45rem; margin-bottom: 0.75rem;">Harmony Community Hearts</h3>
-            <div class="concept-preview-box">
-              <img src="images/logo-concepts/sym5-harmony-hearts.svg" alt="Concept 5 - Harmony Hearts">
+          <!-- Variation 3E: Tricolor Modern Primary -->
+          <div class="var-card">
+            <span style="font-size: 0.85rem; font-weight: 700; color: #0284c7; text-transform: uppercase;">Palette 3E</span>
+            <h3 style="font-size: 1.45rem; margin: 0.35rem 0 0.5rem 0;">Iconic Modern Tricolor</h3>
+
+            <div class="var-preview-box">
+              <img src="images/logo-concepts/sym3-varE-tricolor.svg" alt="Variation 3E">
             </div>
 
-            <div>
-              <span class="pill-tag pill-symmetry">⚖️ 4-Fold Heart Symmetry</span>
-              <span class="pill-tag pill-cheerful">❤️ Warm & Loving</span>
-              <span class="pill-tag pill-trust">🛡️ Trustworthy</span>
+            <div class="palette-dots">
+              <div class="p-dot" style="background: #F59E0B;"></div>
+              <div class="p-dot" style="background: #F43F5E;"></div>
+              <div class="p-dot" style="background: #0284C7;"></div>
+              <div class="p-dot" style="background: #10B981;"></div>
             </div>
 
-            <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.65; margin-top: 0.5rem;">
-              Four inward-reaching heart petals in cheerful Coral, Gold, Jade, and Azure framing a central violet unity star. Expresses empathy, connecting communities with love, and empowering youth.
+            <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.65;">
+              <strong>High-Impact Simplicity:</strong> Strong primary cadence of Sun Gold, Coral Red, and Royal Azure with an emerald accent ray. Super punchy, highly memorable from a distance, and timeless.
             </p>
 
             <div style="margin-top: auto;">
-              <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">In Header Context:</span>
+              <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">In Header:</span>
               <div class="header-preview-sample">
-                <img src="images/logo-concepts/sym5-harmony-hearts.svg" alt="Preview">
+                <img src="images/logo-concepts/sym3-varE-tricolor.svg" alt="Preview">
                 <span>Socido World Cultures</span>
               </div>
-              <button class="btn btn-outline" style="width: 100%; padding: 0.5rem;" onclick="setDemoLogo('images/logo-concepts/sym5-harmony-hearts.svg')">Preview in Top Header &uarr;</button>
+              <button class="btn btn-outline" style="width: 100%; padding: 0.55rem;" onclick="setDemoLogo('images/logo-concepts/sym3-varE-tricolor.svg')">Preview in Top Header &uarr;</button>
             </div>
           </div>
 
         </div>
 
-        <!-- Feedback Box -->
-        <div style="background: #ffffff; padding: 2.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-light); box-shadow: var(--shadow-card); text-align: center; margin-top: 4rem;">
-          <h3 style="font-size: 1.6rem; margin-bottom: 0.5rem;">Which Symmetrical Concept Feels Right?</h3>
-          <p style="color: var(--text-muted); max-width: 650px; margin: 0 auto 1.5rem auto;">
-            Click <strong>"Preview in Top Header"</strong> on any card to see how it looks live at the top of the page! We can also adapt the website's buttons, tags, and accent colors to match the chosen palette.
+        <!-- Live Interactive Ray Color Mixer -->
+        <div class="interactive-tuner-card">
+          <h2 style="font-size: 1.85rem; margin-bottom: 0.5rem; text-align: center;">Interactive Custom Mixer</h2>
+          <p style="text-align: center; color: var(--text-muted); margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+            Want to test your own color ideas? Click any of the ray buttons below to customize the logo in real-time right here!
           </p>
+
+          <div class="tuner-layout">
+            
+            <!-- Live SVG Render -->
+            <div class="custom-svg-display">
+              <svg id="liveSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="180" height="180">
+                <defs>
+                  <path id="live-ray" d="M 100 22 C 112 22, 118 38, 114 54 C 110 70, 100 84, 100 84 C 100 84, 90 70, 86 54 C 82 38, 88 22, 100 22 Z" />
+                </defs>
+                <g id="raysGroup">
+                  <use id="ray0" href="#live-ray" fill="#F59E0B" />
+                  <use id="ray1" href="#live-ray" fill="#F43F5E" transform="rotate(45 100 100)" />
+                  <use id="ray2" href="#live-ray" fill="#0284C7" transform="rotate(90 100 100)" />
+                  <use id="ray3" href="#live-ray" fill="#10B981" transform="rotate(135 100 100)" />
+                  <use id="ray4" href="#live-ray" fill="#F59E0B" transform="rotate(180 100 100)" />
+                  <use id="ray5" href="#live-ray" fill="#F43F5E" transform="rotate(225 100 100)" />
+                  <use id="ray6" href="#live-ray" fill="#0284C7" transform="rotate(270 100 100)" />
+                  <use id="ray7" href="#live-ray" fill="#10B981" transform="rotate(315 100 100)" />
+                </g>
+                <circle cx="100" cy="100" r="30" fill="#ffffff" />
+                <circle id="coreOuter" cx="100" cy="100" r="23" fill="#F59E0B" />
+                <circle cx="100" cy="100" r="14" fill="#ffffff" />
+                <circle id="coreInner" cx="100" cy="100" r="7" fill="#0284C7" />
+              </svg>
+            </div>
+
+            <!-- Controls -->
+            <div>
+              <h4 style="margin-bottom: 0.75rem;">Quick Color Harmony Presets:</h4>
+              <div style="margin-bottom: 1.5rem;">
+                <button class="color-preset-btn" onclick="applyPreset(['#F59E0B','#F43F5E','#0284C7','#10B981','#F59E0B','#F43F5E','#0284C7','#10B981'])">🟡 Quartet Harmony (Gold/Coral/Blue/Green)</button>
+                <button class="color-preset-btn" onclick="applyPreset(['#FBBF24','#F97316','#EF4444','#A855F7','#3B82F6','#06B6D4','#10B981','#84CC16'])">🌈 8-Color Full Rainbow</button>
+                <button class="color-preset-btn" onclick="applyPreset(['#F59E0B','#10B981','#0284C7','#84CC16','#F59E0B','#10B981','#0284C7','#84CC16'])">🌿 Gold, Azure & Green</button>
+                <button class="color-preset-btn" onclick="applyPreset(['#D97706','#E11D48','#7C3AED','#0284C7','#D97706','#E11D48','#7C3AED','#059669'])">🏛️ Deep Royal Heritage</button>
+              </div>
+
+              <div style="background: #f1f5f9; padding: 1.25rem; border-radius: var(--radius-sm);">
+                <p style="font-size: 0.95rem; color: #334155; margin: 0;">
+                  💡 <strong>Tell me your thoughts:</strong> Do you prefer the balanced 4-color symmetry (Palette 3A), the smooth 8-color rainbow (Palette 3B), or would you like specific colors (e.g. warmer sunset tones, cooler ocean tones, or pastel brights)?
+                </p>
+              </div>
+            </div>
+
+          </div>
         </div>
 
       </div>
@@ -376,9 +389,18 @@
     function setDemoLogo(svgPath) {
       const badge = document.getElementById('demoLogoBadge');
       if (badge) {
-        badge.innerHTML = `<img src="${svgPath}" alt="Selected Logo" width="42" height="42" style="display:block;">`;
+        badge.innerHTML = `<img src="${svgPath}" alt="Selected Logo" width="44" height="44" style="display:block;">`;
       }
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function applyPreset(colors) {
+      for (let i = 0; i < 8; i++) {
+        const el = document.getElementById('ray' + i);
+        if (el) el.setAttribute('fill', colors[i]);
+      }
+      document.getElementById('coreOuter').setAttribute('fill', colors[0]);
+      document.getElementById('coreInner').setAttribute('fill', colors[2] || colors[1]);
     }
   </script>
 </body>

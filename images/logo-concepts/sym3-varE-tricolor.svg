@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <path id="ray" d="M 100 22 C 112 22, 118 38, 114 54 C 110 70, 100 84, 100 84 C 100 84, 90 70, 86 54 C 82 38, 88 22, 100 22 Z" />
+  </defs>
+
+  <use href="#ray" fill="#F59E0B" /> <!-- Gold -->
+  <use href="#ray" fill="#F43F5E" transform="rotate(45 100 100)" /> <!-- Coral -->
+  <use href="#ray" fill="#0284C7" transform="rotate(90 100 100)" /> <!-- Azure -->
+  <use href="#ray" fill="#F59E0B" transform="rotate(135 100 100)" /> <!-- Gold -->
+  <use href="#ray" fill="#F43F5E" transform="rotate(180 100 100)" /> <!-- Coral -->
+  <use href="#ray" fill="#0284C7" transform="rotate(225 100 100)" /> <!-- Azure -->
+  <use href="#ray" fill="#F59E0B" transform="rotate(270 100 100)" /> <!-- Gold -->
+  <use href="#ray" fill="#10B981" transform="rotate(315 100 100)" /> <!-- Jade Accent -->
+
+  <circle cx="100" cy="100" r="30" fill="#ffffff" />
+  <circle cx="100" cy="100" r="23" fill="#F59E0B" />
+  <circle cx="100" cy="100" r="14" fill="#ffffff" />
+  <circle cx="100" cy="100" r="7" fill="#F43F5E" />
+</svg>
