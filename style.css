@@ -785,26 +785,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   Board of Directors Grid & Member Cards
+   Board of Directors — Vertical Stacked Layout (One Below Another)
    ========================================================================== */
-.board-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+.board-list {
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
-  margin-top: 2rem;
+  max-width: 960px;
+  margin: 2.5rem auto 0 auto;
 }
 
 .board-card {
   background: #ffffff;
   border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
-  padding: 2.5rem 2rem;
+  padding: 2.25rem 2.5rem;
   box-shadow: var(--shadow-card);
   transition: var(--transition);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  text-align: center;
+  gap: 2.25rem;
   position: relative;
   overflow: hidden;
 }
@@ -814,21 +815,21 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
-  opacity: 0;
-  transition: opacity 0.25s ease;
+  bottom: 0;
+  width: 5px;
+  background: linear-gradient(180deg, var(--primary), var(--secondary));
+  opacity: 0.9;
+  transition: width 0.25s ease;
 }
 
 .board-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
   box-shadow: var(--shadow-hover);
   border-color: rgba(13, 148, 136, 0.35);
 }
 
 .board-card:hover::before {
-  opacity: 1;
+  width: 8px;
 }
 
 .board-photo-wrap {
@@ -838,7 +839,6 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50%;
   padding: 5px;
   background: linear-gradient(135deg, rgba(13, 148, 136, 0.25), rgba(2, 132, 199, 0.25));
-  margin-bottom: 1.25rem;
   flex-shrink: 0;
 }
 
@@ -851,10 +851,28 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
 }
 
-.board-card h3 {
-  font-size: 1.35rem;
+.board-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.board-header-info {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.board-content h3 {
+  font-size: 1.45rem;
   color: var(--text-heading);
-  margin-bottom: 0.35rem;
+  margin: 0;
 }
 
 .board-role {
@@ -865,17 +883,38 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.05em;
   color: var(--primary);
   background: rgba(13, 148, 136, 0.1);
-  padding: 0.25rem 0.85rem;
+  padding: 0.3rem 0.9rem;
   border-radius: 50px;
-  margin-bottom: 1.25rem;
+  margin: 0;
 }
 
 .board-bio {
   color: var(--text-body);
-  font-size: 0.95rem;
-  line-height: 1.7;
-  text-align: left;
-  flex-grow: 1;
+  font-size: 0.98rem;
+  line-height: 1.75;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .board-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
+  }
+  .board-content {
+    text-align: center;
+  }
+  .board-header-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding-bottom: 0.75rem;
+  }
+  .board-bio {
+    text-align: left;
+  }
 }
 
 /* Responsive */
