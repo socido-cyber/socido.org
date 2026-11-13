@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="c3-sprout" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#316200"/>
+      <stop offset="100%" stop-color="#5cbc09"/>
+    </linearGradient>
+  </defs>
+  <!-- Circular Badge Outline -->
+  <circle cx="100" cy="100" r="86" fill="none" stroke="#e4ede0" stroke-width="6"/>
+  <circle cx="100" cy="100" r="86" fill="none" stroke="#316200" stroke-width="6" stroke-dasharray="160 380" stroke-linecap="round" transform="rotate(-45 100 100)"/>
+
+  <!-- Left Sprout Leaf (Curved & Cheerful) -->
+  <path d="M 100 152 C 98 126, 88 108, 64 96 C 60 118, 72 142, 100 152 Z" fill="#316200" />
+
+  <!-- Right Primary Leaf (Reaching up in vitality) -->
+  <path d="M 100 152 C 102 112, 120 84, 146 72 C 150 102, 134 136, 100 152 Z" fill="#5cbc09" />
+
+  <!-- Small Top Sprout Tender Leaf -->
+  <path d="M 100 114 C 94 92, 104 76, 116 68 C 120 82, 114 104, 100 114 Z" fill="#8bb90c" />
+
+  <!-- Cheerful Rising Sun Orb -->
+  <circle cx="76" cy="66" r="18" fill="#8bb90c" />
+</svg>

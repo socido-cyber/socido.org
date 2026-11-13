@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="c2-left" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#316200"/>
+      <stop offset="100%" stop-color="#4d9500"/>
+    </linearGradient>
+    <linearGradient id="c2-right" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5cbc09"/>
+      <stop offset="100%" stop-color="#8bb90c"/>
+    </linearGradient>
+  </defs>
+  <!-- Cheerful Circular Background Aura -->
+  <circle cx="100" cy="100" r="88" fill="#f3f8ee" />
+  
+  <!-- Smiling Base Arc / Bridge of Community -->
+  <path d="M 32 108 C 42 152, 85 174, 100 174 C 115 174, 158 152, 168 108 C 152 136, 124 154, 100 154 C 76 154, 48 136, 32 108 Z" fill="#316200" />
+
+  <!-- Left Embracing Leaf/Hand -->
+  <path d="M 44 116 C 40 76, 68 44, 96 48 C 94 66, 80 94, 60 112 C 54 115, 48 116, 44 116 Z" fill="url(#c2-left)" />
+
+  <!-- Right Embracing Leaf/Hand -->
+  <path d="M 156 116 C 160 76, 132 44, 104 48 C 106 66, 120 94, 140 112 C 146 115, 152 116, 156 116 Z" fill="url(#c2-right)" />
+
+  <!-- Cheerful Joyful Sun / Heart of Youth in Center -->
+  <circle cx="100" cy="86" r="22" fill="#8bb90c" />
+</svg>

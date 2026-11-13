@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="c1-grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8bb90c"/>
+      <stop offset="100%" stop-color="#5cbc09"/>
+    </linearGradient>
+    <linearGradient id="c1-grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5cbc09"/>
+      <stop offset="100%" stop-color="#316200"/>
+    </linearGradient>
+  </defs>
+  <!-- 4 Interlocking Petals forming a circular bloom & central star -->
+  <!-- Top Petal -->
+  <path d="M 100 20 C 135 20, 165 48, 165 82 C 145 82, 118 70, 100 52 C 82 70, 55 82, 35 82 C 35 48, 65 20, 100 20 Z" fill="url(#c1-grad1)" />
+  <!-- Right Petal -->
+  <path d="M 180 100 C 180 135, 152 165, 118 165 C 118 145, 130 118, 148 100 C 130 82, 118 55, 118 35 C 152 35, 180 65, 180 100 Z" fill="#5cbc09" />
+  <!-- Bottom Petal (Grounded Forest Green) -->
+  <path d="M 100 180 C 65 180, 35 152, 35 118 C 55 118, 82 130, 100 148 C 118 130, 145 118, 165 118 C 165 152, 135 180, 100 180 Z" fill="url(#c1-grad2)" />
+  <!-- Left Petal -->
+  <path d="M 20 100 C 20 65, 48 35, 82 35 C 82 55, 70 82, 52 100 C 70 118, 82 145, 82 165 C 48 165, 20 135, 20 100 Z" fill="#4d9500" />
+  <!-- Cheerful Core Seed / Sun -->
+  <circle cx="100" cy="100" r="16" fill="#8bb90c" />
+</svg>
