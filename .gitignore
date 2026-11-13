@@ -7,8 +7,9 @@
 # Thumbnails
 Thumbs.db
 
-# Editor directories and files
-.vscode/
+# Temporary scratch scripts
+scratch/
+
 .idea/
 *.swp
 *~

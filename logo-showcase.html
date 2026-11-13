@@ -3,19 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Concept 3 Color Tuning Studio — Socido World Cultures</title>
-  <link rel="stylesheet" href="style.css?v=7">
+  <title>Logo Design & Color Studio — Socido World Cultures</title>
+  <link rel="stylesheet" href="style.css?v=10">
   <style>
     .studio-header {
       text-align: center;
-      max-width: 800px;
-      margin: 0 auto 3rem auto;
+      max-width: 820px;
+      margin: 0 auto 2.5rem auto;
     }
+    
+    /* Navigation Tabs */
+    .tab-nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 3rem;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.5rem;
+    }
+    .tab-btn {
+      background: none;
+      border: none;
+      font-size: 1.15rem;
+      font-weight: 700;
+      font-family: var(--font-heading);
+      color: var(--text-muted);
+      padding: 0.75rem 1.75rem;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .tab-btn:hover {
+      color: #0284c7;
+      background: rgba(14, 165, 233, 0.08);
+    }
+    .tab-btn.active {
+      color: #ffffff;
+      background: #0284c7;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+    }
+
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+      animation: fadeIn 0.35s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     .variation-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
       gap: 2rem;
-      margin-bottom: 4rem;
+      margin-bottom: 3.5rem;
     }
     .var-card {
       background: #ffffff;
@@ -37,7 +84,7 @@
       background: #f8fafc;
       border: 1px solid #f1f5f9;
       border-radius: var(--radius-sm);
-      padding: 2.5rem;
+      padding: 2.25rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -45,12 +92,12 @@
       min-height: 200px;
     }
     .var-preview-box img {
-      width: 130px;
-      height: 130px;
+      width: 135px;
+      height: 135px;
       transition: transform 0.35s ease;
     }
     .var-card:hover .var-preview-box img {
-      transform: scale(1.1);
+      transform: scale(1.08);
     }
     .palette-dots {
       display: flex;
@@ -65,6 +112,7 @@
       border-radius: 50%;
       border: 2px solid #ffffff;
       box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      cursor: pointer;
     }
     .header-preview-sample {
       background: #ffffff;
@@ -76,16 +124,16 @@
       gap: 0.75rem;
       font-family: var(--font-heading);
       font-weight: 800;
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       color: #0f172a;
       margin: 1.25rem 0;
     }
     .header-preview-sample img {
-      width: 38px;
-      height: 38px;
+      width: 36px;
+      height: 36px;
     }
 
-    /* Live Interactive Tuner */
+    /* Interactive Live Tuners */
     .interactive-tuner-card {
       background: #ffffff;
       border: 2px solid #0ea5e9;
@@ -119,19 +167,37 @@
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.5rem 1rem;
+      padding: 0.55rem 1.15rem;
       background: #ffffff;
       border: 1px solid #cbd5e1;
       border-radius: 50px;
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       font-weight: 600;
       cursor: pointer;
-      margin: 0.25rem;
+      margin: 0.35rem 0.25rem;
       transition: all 0.2s ease;
     }
     .color-preset-btn:hover {
       border-color: #0ea5e9;
       background: #f0f9ff;
+      color: #0284c7;
+    }
+    .comparison-banner {
+      background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%);
+      border: 1px solid #bae6fd;
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      margin-bottom: 3rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 768px) {
+      .comparison-banner {
+        flex-direction: column;
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -142,7 +208,7 @@
     <div class="container header-inner">
       <a href="index.html" class="brand-logo">
         <div class="logo-badge" id="demoLogoBadge">
-          <img src="images/logo-concepts/sym3-varA-harmony4.svg" alt="Active Demo Logo" width="44" height="44">
+          <img src="images/logo-concepts/tree-var1-cultural-blossom.svg" alt="Active Demo Logo" width="44" height="44">
         </div>
         <span>Socido World Cultures</span>
       </a>
@@ -155,223 +221,518 @@
       <div class="container">
         
         <div class="studio-header">
-          <span class="tag" style="background: rgba(14, 165, 233, 0.1); color: #0284c7; padding: 0.35rem 1.25rem; border-radius: 50px; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Color Tuning Studio</span>
-          <h1 style="font-size: 2.75rem; margin-top: 0.75rem; margin-bottom: 0.75rem;">Concept 3: Radiant Sunburst</h1>
+          <span class="tag" style="background: rgba(14, 165, 233, 0.1); color: #0284c7; padding: 0.35rem 1.25rem; border-radius: 50px; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Identity Design Studio</span>
+          <h1 style="font-size: 2.75rem; margin-top: 0.75rem; margin-bottom: 0.75rem;">Logo Exploration & Color Harmonies</h1>
           <p style="color: var(--text-muted); font-size: 1.15rem;">
-            You selected the <strong>Radiant Sunburst Pinwheel</strong> (8 symmetrical rays orbiting a cheerful center). Below are <strong>5 curated color harmonies</strong> exploring balanced symmetry, rich heritage tones, and vibrant multicultural palettes.
+            Explore your original <strong>Circular Tree Logo</strong> imbued with vibrant multicultural colors, alongside the <strong>Concept 3 Radiant Sunburst</strong> variations.
           </p>
         </div>
 
-        <!-- 5 Curated Color Tunings -->
-        <div class="variation-grid">
+        <!-- Tab Controls -->
+        <div class="tab-nav">
+          <button class="tab-btn active" id="tabTreeBtn" onclick="switchTab('tree')">
+            <span>🌳</span> Colorful Tree Variations (6)
+          </button>
+          <button class="tab-btn" id="tabSunBtn" onclick="switchTab('sun')">
+            <span>☀️</span> Concept 3: Radiant Sunburst (5)
+          </button>
+        </div>
 
-          <!-- Variation 3A: Global Harmony Quartet -->
-          <div class="var-card">
-            <span style="font-size: 0.85rem; font-weight: 700; color: #0284c7; text-transform: uppercase;">Palette 3A</span>
-            <h3 style="font-size: 1.45rem; margin: 0.35rem 0 0.5rem 0;">Global Harmony Quartet</h3>
-            
-            <div class="var-preview-box">
-              <img src="images/logo-concepts/sym3-varA-harmony4.svg" alt="Variation 3A">
-            </div>
+        <!-- ============================================================= -->
+        <!-- TAB 1: COLORFUL TREE LOGO VARIATIONS                         -->
+        <!-- ============================================================= -->
+        <div id="treeTab" class="tab-content active">
 
-            <div class="palette-dots">
-              <div class="p-dot" style="background: #F59E0B;" title="Sunbeam Gold #F59E0B"></div>
-              <div class="p-dot" style="background: #F43F5E;" title="Coral Rose #F43F5E"></div>
-              <div class="p-dot" style="background: #0284C7;" title="Ocean Blue #0284C7"></div>
-              <div class="p-dot" style="background: #10B981;" title="Emerald Jade #10B981"></div>
-            </div>
-
-            <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.65;">
-              <strong>Balanced Mirrored Pairs:</strong> 4 colors each appear exactly twice in 180° opposite symmetry (Gold tops and bottoms; Blue flanks left and right; Coral and Jade cross diagonally). Clean, balanced, and joyful.
-            </p>
-
-            <div style="margin-top: auto;">
-              <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">In Header:</span>
-              <div class="header-preview-sample">
-                <img src="images/logo-concepts/sym3-varA-harmony4.svg" alt="Preview">
-                <span>Socido World Cultures</span>
+          <!-- Original vs Colorful Comparison Intro -->
+          <div class="comparison-banner">
+            <div style="flex: 0 0 auto; display: flex; align-items: center; gap: 1rem; background: #ffffff; padding: 1rem 1.5rem; border-radius: var(--radius-sm); box-shadow: var(--shadow-sm);">
+              <div style="text-align: center;">
+                <img src="images/socido-logo.svg" alt="Original Green Tree" width="64" height="64" style="display:block; margin: 0 auto 0.25rem auto;">
+                <span style="font-size: 0.75rem; font-weight: 700; color: #475569;">Original (Monochrome)</span>
               </div>
-              <button class="btn btn-outline" style="width: 100%; padding: 0.55rem;" onclick="setDemoLogo('images/logo-concepts/sym3-varA-harmony4.svg')">Preview in Top Header &uarr;</button>
+              <span style="font-size: 1.5rem; color: #94a3b8;">&rarr;</span>
+              <div style="text-align: center;">
+                <img src="images/logo-concepts/tree-var1-cultural-blossom.svg" alt="Colorful Tree" width="64" height="64" style="display:block; margin: 0 auto 0.25rem auto;">
+                <span style="font-size: 0.75rem; font-weight: 700; color: #0284c7;">Multicultural Blossom</span>
+              </div>
+            </div>
+            <div style="flex: 1 1 300px;">
+              <h3 style="margin: 0 0 0.35rem 0; font-size: 1.25rem; color: #0f172a;">Your Iconic Circular Tree — Reimagined with Vibrant Life</h3>
+              <p style="margin: 0; color: #334155; font-size: 0.95rem; line-height: 1.55;">
+                Your tree has 15 distinct organic vector paths. Below, we’ve mapped these branches into balanced, cheerful multicultural color stories. Each branch represents a cultural tradition flourishing from common roots.
+              </p>
             </div>
           </div>
 
-          <!-- Variation 3B: Continuous Chromatic Spectrum -->
-          <div class="var-card">
-            <span style="font-size: 0.85rem; font-weight: 700; color: #0284c7; text-transform: uppercase;">Palette 3B</span>
-            <h3 style="font-size: 1.45rem; margin: 0.35rem 0 0.5rem 0;">Chromatic Spectrum Wheel</h3>
+          <!-- Tree Variation Cards Grid -->
+          <div class="variation-grid">
 
-            <div class="var-preview-box">
-              <img src="images/logo-concepts/sym3-varB-spectrum8.svg" alt="Variation 3B">
-            </div>
-
-            <div class="palette-dots">
-              <div class="p-dot" style="background: #FBBF24;"></div>
-              <div class="p-dot" style="background: #F97316;"></div>
-              <div class="p-dot" style="background: #EF4444;"></div>
-              <div class="p-dot" style="background: #A855F7;"></div>
-              <div class="p-dot" style="background: #3B82F6;"></div>
-              <div class="p-dot" style="background: #06B6D4;"></div>
-              <div class="p-dot" style="background: #10B981;"></div>
-              <div class="p-dot" style="background: #84CC16;"></div>
-            </div>
-
-            <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.65;">
-              <strong>Smooth Cultural Rainbow:</strong> A harmonious progression from warm sunbeam yellow & orange through festival crimson, orchid purple, ocean azure, turquoise, and lush spring green. Celebrates the full spectrum of world cultures.
-            </p>
-
-            <div style="margin-top: auto;">
-              <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">In Header:</span>
-              <div class="header-preview-sample">
-                <img src="images/logo-concepts/sym3-varB-spectrum8.svg" alt="Preview">
-                <span>Socido World Cultures</span>
+            <!-- Tree Variation 1: Cultural Blossom -->
+            <div class="var-card">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 0.85rem; font-weight: 700; color: #0284c7; text-transform: uppercase;">Tree Variation 1</span>
+                <span style="font-size: 0.75rem; background: #e0f2fe; color: #0369a1; padding: 0.2rem 0.65rem; border-radius: 50px; font-weight: 700;">Recommended</span>
               </div>
-              <button class="btn btn-outline" style="width: 100%; padding: 0.55rem;" onclick="setDemoLogo('images/logo-concepts/sym3-varB-spectrum8.svg')">Preview in Top Header &uarr;</button>
+              <h3 style="font-size: 1.45rem; margin: 0.35rem 0 0.5rem 0;">Cultural Blossom Tree</h3>
+              
+              <div class="var-preview-box">
+                <img src="images/logo-concepts/tree-var1-cultural-blossom.svg" alt="Tree Variation 1: Cultural Blossom">
+              </div>
+
+              <div class="palette-dots">
+                <div class="p-dot" style="background: #1E293B;" title="Grounded Slate Trunk #1E293B"></div>
+                <div class="p-dot" style="background: #10B981;" title="Emerald Jade #10B981"></div>
+                <div class="p-dot" style="background: #F59E0B;" title="Sunbeam Gold #F59E0B"></div>
+                <div class="p-dot" style="background: #F43F5E;" title="Coral Rose #F43F5E"></div>
+                <div class="p-dot" style="background: #0284C7;" title="Ocean Blue #0284C7"></div>
+              </div>
+
+              <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.65;">
+                <strong>Grounded Trunk + Flowering World Cultures:</strong> A modern slate trunk anchors the base, while the canopy bursts into radiant foliage. Spring Jade on the left, Golden Sunbeam at the top apex, Coral Blossom at top-right, and Ocean Azure on the right.
+              </p>
+
+              <div style="margin-top: auto;">
+                <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">In Header:</span>
+                <div class="header-preview-sample">
+                  <img src="images/logo-concepts/tree-var1-cultural-blossom.svg" alt="Preview">
+                  <span>Socido World Cultures</span>
+                </div>
+                <button class="btn btn-outline" style="width: 100%; padding: 0.55rem;" onclick="setDemoLogo('images/logo-concepts/tree-var1-cultural-blossom.svg')">Preview in Top Header &uarr;</button>
+              </div>
             </div>
+
+            <!-- Tree Variation 2: Original Forest Trunk + Vivid Canopy -->
+            <div class="var-card">
+              <span style="font-size: 0.85rem; font-weight: 700; color: #0284c7; text-transform: uppercase;">Tree Variation 2</span>
+              <h3 style="font-size: 1.45rem; margin: 0.35rem 0 0.5rem 0;">Heritage Green Trunk & Blooms</h3>
+
+              <div class="var-preview-box">
+                <img src="images/logo-concepts/tree-var2-green-trunk-vivid.svg" alt="Tree Variation 2: Heritage Green Trunk">
+              </div>
+
+              <div class="palette-dots">
+                <div class="p-dot" style="background: #316200;" title="Original Socido Forest Green #316200"></div>
+                <div class="p-dot" style="background: #84CC16;" title="Lime #84CC16"></div>
+                <div class="p-dot" style="background: #F59E0B;" title="Sun Gold #F59E0B"></div>
+                <div class="p-dot" style="background: #F43F5E;" title="Coral #F43F5E"></div>
+                <div class="p-dot" style="background: #8B5CF6;" title="Violet #8B5CF6"></div>
+                <div class="p-dot" style="background: #0EA5E9;" title="Sky Blue #0EA5E9"></div>
+              </div>
+
+              <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.65;">
+                <strong>Brand Continuity + Vibrant Joy:</strong> The trunk remains 100% faithful to the official forest green (<code style="background:#f1f5f9; padding:2px 4px;">#316200</code>) from your PDF letterhead, but the leaves bloom with multicultural celebration (Lime, Gold, Coral, Sky, and Violet).
+              </p>
+
+              <div style="margin-top: auto;">
+                <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">In Header:</span>
+                <div class="header-preview-sample">
+                  <img src="images/logo-concepts/tree-var2-green-trunk-vivid.svg" alt="Preview">
+                  <span>Socido World Cultures</span>
+                </div>
+                <button class="btn btn-outline" style="width: 100%; padding: 0.55rem;" onclick="setDemoLogo('images/logo-concepts/tree-var2-green-trunk-vivid.svg')">Preview in Top Header &uarr;</button>
+              </div>
+            </div>
+
+            <!-- Tree Variation 3: Global Harmony Quartet -->
+            <div class="var-card">
+              <span style="font-size: 0.85rem; font-weight: 700; color: #0284c7; text-transform: uppercase;">Tree Variation 3</span>
+              <h3 style="font-size: 1.45rem; margin: 0.35rem 0 0.5rem 0;">Global Harmony Quartet</h3>
+
+              <div class="var-preview-box">
+                <img src="images/logo-concepts/tree-var3-harmony-quartet.svg" alt="Tree Variation 3: Harmony Quartet">
+              </div>
+
+              <div class="palette-dots">
+                <div class="p-dot" style="background: #334155;" title="Slate Trunk #334155"></div>
+                <div class="p-dot" style="background: #F59E0B;" title="Sunbeam Gold #F59E0B"></div>
+                <div class="p-dot" style="background: #F43F5E;" title="Coral Rose #F43F5E"></div>
+                <div class="p-dot" style="background: #0284C7;" title="Ocean Blue #0284C7"></div>
+                <div class="p-dot" style="background: #10B981;" title="Emerald Jade #10B981"></div>
+              </div>
+
+              <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.65;">
+                <strong>4 Balanced Colors:</strong> Uses the exact 4-color harmony from Concept 3 (Gold, Coral, Blue, and Jade). Symmetrical distribution balances the left and right foliage evenly, delivering high recognition and clean graphic unity.
+              </p>
+
+              <div style="margin-top: auto;">
+                <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">In Header:</span>
+                <div class="header-preview-sample">
+                  <img src="images/logo-concepts/tree-var3-harmony-quartet.svg" alt="Preview">
+                  <span>Socido World Cultures</span>
+                </div>
+                <button class="btn btn-outline" style="width: 100%; padding: 0.55rem;" onclick="setDemoLogo('images/logo-concepts/tree-var3-harmony-quartet.svg')">Preview in Top Header &uarr;</button>
+              </div>
+            </div>
+
+            <!-- Tree Variation 4: Chromatic Spectrum Wheel -->
+            <div class="var-card">
+              <span style="font-size: 0.85rem; font-weight: 700; color: #0284c7; text-transform: uppercase;">Tree Variation 4</span>
+              <h3 style="font-size: 1.45rem; margin: 0.35rem 0 0.5rem 0;">Chromatic Spectrum Wheel</h3>
+
+              <div class="var-preview-box">
+                <img src="images/logo-concepts/tree-var4-chromatic-wheel.svg" alt="Tree Variation 4: Chromatic Wheel">
+              </div>
+
+              <div class="palette-dots">
+                <div class="p-dot" style="background: #059669;"></div>
+                <div class="p-dot" style="background: #84CC16;"></div>
+                <div class="p-dot" style="background: #F59E0B;"></div>
+                <div class="p-dot" style="background: #EF4444;"></div>
+                <div class="p-dot" style="background: #A855F7;"></div>
+                <div class="p-dot" style="background: #0EA5E9;"></div>
+              </div>
+
+              <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.65;">
+                <strong>Continuous 360° Circular Rainbow:</strong> The circular geometry naturally flows clockwise: Emerald Jade &rarr; Fresh Lime &rarr; Sunbeam Gold &rarr; Tangerine &rarr; Crimson Rose &rarr; Orchid Purple &rarr; Sky Azure. Rich and multifaceted.
+              </p>
+
+              <div style="margin-top: auto;">
+                <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">In Header:</span>
+                <div class="header-preview-sample">
+                  <img src="images/logo-concepts/tree-var4-chromatic-wheel.svg" alt="Preview">
+                  <span>Socido World Cultures</span>
+                </div>
+                <button class="btn btn-outline" style="width: 100%; padding: 0.55rem;" onclick="setDemoLogo('images/logo-concepts/tree-var4-chromatic-wheel.svg')">Preview in Top Header &uarr;</button>
+              </div>
+            </div>
+
+            <!-- Tree Variation 5: Warm Sunrise Canopy -->
+            <div class="var-card">
+              <span style="font-size: 0.85rem; font-weight: 700; color: #0284c7; text-transform: uppercase;">Tree Variation 5</span>
+              <h3 style="font-size: 1.45rem; margin: 0.35rem 0 0.5rem 0;">Warm Sunrise Canopy</h3>
+
+              <div class="var-preview-box">
+                <img src="images/logo-concepts/tree-var5-warm-sunrise.svg" alt="Tree Variation 5: Warm Sunrise">
+              </div>
+
+              <div class="palette-dots">
+                <div class="p-dot" style="background: #F59E0B;" title="Sun Gold #F59E0B"></div>
+                <div class="p-dot" style="background: #F97316;" title="Tangerine #F97316"></div>
+                <div class="p-dot" style="background: #F43F5E;" title="Coral Rose #F43F5E"></div>
+                <div class="p-dot" style="background: #0EA5E9;" title="Sky Blue #0EA5E9"></div>
+              </div>
+
+              <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.65;">
+                <strong>Warm, Optimistic & Welcoming:</strong> Dominated by golden sunshine, mandarin orange, and coral rose leaves, accented with sky azure. Evokes dawn, hope, and new beginnings for youth and families.
+              </p>
+
+              <div style="margin-top: auto;">
+                <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">In Header:</span>
+                <div class="header-preview-sample">
+                  <img src="images/logo-concepts/tree-var5-warm-sunrise.svg" alt="Preview">
+                  <span>Socido World Cultures</span>
+                </div>
+                <button class="btn btn-outline" style="width: 100%; padding: 0.55rem;" onclick="setDemoLogo('images/logo-concepts/tree-var5-warm-sunrise.svg')">Preview in Top Header &uarr;</button>
+              </div>
+            </div>
+
+            <!-- Tree Variation 6: Radiant Fluid Gradient Tree -->
+            <div class="var-card">
+              <span style="font-size: 0.85rem; font-weight: 700; color: #0284c7; text-transform: uppercase;">Tree Variation 6</span>
+              <h3 style="font-size: 1.45rem; margin: 0.35rem 0 0.5rem 0;">Radiant Fluid Gradient</h3>
+
+              <div class="var-preview-box">
+                <img src="images/logo-concepts/tree-var6-radiant-gradient.svg" alt="Tree Variation 6: Radiant Fluid Gradient">
+              </div>
+
+              <div class="palette-dots">
+                <div class="p-dot" style="background: linear-gradient(135deg, #10B981, #F59E0B, #F43F5E, #0284C7);" title="Seamless Vector Multi-stop Gradient"></div>
+              </div>
+
+              <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.65;">
+                <strong>Modern Seamless Gradient:</strong> Instead of flat solid colors per leaf, a seamless vector multi-stop gradient washes softly across the entire foliage from Spring Jade through Gold and Coral to Cerulean Blue. Ultra-sleek and contemporary.
+              </p>
+
+              <div style="margin-top: auto;">
+                <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">In Header:</span>
+                <div class="header-preview-sample">
+                  <img src="images/logo-concepts/tree-var6-radiant-gradient.svg" alt="Preview">
+                  <span>Socido World Cultures</span>
+                </div>
+                <button class="btn btn-outline" style="width: 100%; padding: 0.55rem;" onclick="setDemoLogo('images/logo-concepts/tree-var6-radiant-gradient.svg')">Preview in Top Header &uarr;</button>
+              </div>
+            </div>
+
           </div>
 
-          <!-- Variation 3C: Refined Heritage -->
-          <div class="var-card">
-            <span style="font-size: 0.85rem; font-weight: 700; color: #0284c7; text-transform: uppercase;">Palette 3C</span>
-            <h3 style="font-size: 1.45rem; margin: 0.35rem 0 0.5rem 0;">Refined Heritage</h3>
-
-            <div class="var-preview-box">
-              <img src="images/logo-concepts/sym3-varC-refined.svg" alt="Variation 3C">
-            </div>
-
-            <div class="palette-dots">
-              <div class="p-dot" style="background: #D97706;"></div>
-              <div class="p-dot" style="background: #E11D48;"></div>
-              <div class="p-dot" style="background: #7C3AED;"></div>
-              <div class="p-dot" style="background: #0284C7;"></div>
-              <div class="p-dot" style="background: #059669;"></div>
-            </div>
-
-            <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.65;">
-              <strong>High-Trust Institutional Hues:</strong> Slightly deeper, richer tones—deep golden saffron, royal terracotta rose, rich violet, Mediterranean blue, and forest jade. Sophisticated, authoritative, and deeply grounded.
+          <!-- Interactive Tree Palette Mixer -->
+          <div class="interactive-tuner-card">
+            <h2 style="font-size: 1.85rem; margin-bottom: 0.5rem; text-align: center;">Interactive Tree Color Studio</h2>
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 2.5rem; max-width: 650px; margin-left: auto; margin-right: auto;">
+              Click any color preset below to watch your tree logo instantly transform in real-time right in your browser!
             </p>
 
-            <div style="margin-top: auto;">
-              <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">In Header:</span>
-              <div class="header-preview-sample">
-                <img src="images/logo-concepts/sym3-varC-refined.svg" alt="Preview">
-                <span>Socido World Cultures</span>
+            <div class="tuner-layout">
+              
+              <!-- Live Tree SVG Render -->
+              <div class="custom-svg-display">
+                <svg id="liveTreeSvg" xmlns="http://www.w3.org/2000/svg" viewBox="100.10 101.30 299.80 298.70" width="190" height="190">
+                  <g id="interactiveTreePaths">
+                    <path id="tp0" fill="#1E293B" d="M 223.10 393.50 C 231.10 395.00, 238.80 389.60, 240.10 381.60 C 246.30 343.70, 239.90 320.10, 226.90 303.70 C 223.20 299.00, 216.80 297.50, 211.30 299.80 C 201.30 303.90, 192.00 306.40, 183.30 307.80 C 148.40 312.70, 140.50 335.80, 138.70 344.00 C 160.00 369.20, 189.50 387.10, 223.10 393.50 Z" />
+                    <path id="tp1" fill="#10B981" d="M 199.60 215.40 C 195.70 212.20, 192.00 209.10, 188.60 206.10 C 189.10 218.80, 187.10 234.90, 178.60 252.80 C 179.20 253.10, 179.70 253.30, 180.30 253.60 C 204.90 265.20, 232.80 278.50, 247.60 307.20 C 240.40 270.90, 225.10 235.90, 199.60 215.40 Z" />
+                    <path id="tp2" fill="#F59E0B" d="M 249.30 170.70 C 237.70 143.70, 241.30 119.80, 245.20 106.30 C 231.60 106.70, 218.50 109.00, 206.20 113.00 C 218.00 129.80, 239.00 169.00, 229.50 223.90 C 242.30 240.80, 251.70 261.30, 258.10 283.10 C 268.20 230.40, 262.80 202.10, 249.30 170.70 Z" />
+                    <path id="tp3" fill="#059669" d="M 156.20 241.30 C 158.80 242.90, 161.60 244.30, 164.40 245.80 C 179.20 214.40, 170.50 189.80, 168.80 185.70 C 156.40 170.80, 150.30 158.20, 147.20 149.10 C 140.10 156.30, 133.70 164.20, 128.20 172.80 C 126.40 180.30, 119.20 219.50, 156.20 241.30 Z" />
+                    <path id="tp4" fill="#10B981" d="M 145.50 306.20 C 130.40 302.30, 118.50 294.90, 109.70 287.50 C 113.50 302.10, 119.60 315.90, 127.40 328.30 C 131.00 320.70, 136.80 312.80, 145.50 306.20 Z" />
+                    <path id="tp5" fill="#84CC16" d="M 209.50 203.00 C 211.60 204.70, 213.60 206.50, 215.60 208.30 C 219.60 161.50, 199.30 129.70, 190.90 118.70 C 180.00 123.60, 169.80 129.80, 160.50 137.20 C 162.00 146.00, 169.80 171.10, 209.50 203.00 Z" />
+                    <path id="tp6" fill="#34D399" d="M 105.10 251.10 C 105.10 254.00, 105.20 256.90, 105.40 259.70 C 111.20 268.50, 143.10 310.60, 205.90 284.90 C 196.00 278.40, 184.90 273.20, 173.60 267.80 C 165.10 263.70, 156.20 259.60, 148.20 254.90 C 126.20 242.00, 116.20 223.30, 112.40 205.70 C 107.70 220.00, 105.10 235.20, 105.10 251.10 Z" />
+                    <path id="tp7" fill="#F59E0B" d="M 278.20 217.70 C 302.70 158.20, 286.90 120.80, 280.70 109.50 C 274.50 108.20, 268.10 107.20, 261.70 106.70 C 258.30 116.10, 252.70 138.50, 263.80 164.50 C 271.20 181.60, 276.30 198.10, 278.20 217.70 Z" />
+                    <path id="tp8" fill="#1E293B" d="M 381.20 312.60 C 370.80 302.70, 340.60 276.80, 314.60 283.90 C 311.40 285.40, 308.30 287.20, 305.40 289.20 C 283.00 304.80, 277.50 331.00, 277.60 356.70 C 277.60 358.50, 278.00 370.30, 278.30 380.00 C 278.50 386.90, 285.30 391.80, 291.90 389.80 C 331.40 377.90, 363.90 349.50, 381.20 312.60 Z" />
+                    <path id="tp9" fill="#F43F5E" d="M 356.90 209.10 C 368.80 205.70, 379.60 204.80, 387.40 204.80 C 384.40 195.90, 380.50 187.30, 375.90 179.20 C 371.90 186.80, 365.80 197.10, 356.90 209.10 Z" />
+                    <path id="tp10" fill="#0284C7" d="M 394.90 254.60 C 386.40 263.10, 373.80 271.90, 356.10 275.20 C 369.10 281.60, 380.20 290.40, 387.50 296.90 C 392.00 283.60, 394.50 269.40, 394.90 254.60 Z" />
+                    <path id="tp11" fill="#FB7185" d="M 343.70 140.60 C 331.00 129.80, 316.40 121.20, 300.50 115.30 C 304.90 127.50, 308.70 145.60, 306.80 168.80 C 321.20 160.90, 335.80 148.00, 343.70 140.60 Z" />
+                    <path id="tp12" fill="#0EA5E9" d="M 325.00 245.30 C 322.10 248.10, 319.00 251.00, 315.80 253.90 C 308.20 260.70, 301.90 267.50, 296.70 274.90 C 301.00 272.10, 305.30 270.10, 309.70 268.80 C 319.30 264.50, 330.90 261.60, 344.90 260.80 C 375.20 259.00, 389.80 237.40, 393.60 230.80 C 393.10 227.40, 392.50 224.00, 391.80 220.70 C 379.60 220.20, 348.60 221.70, 325.00 245.30 Z" />
+                    <path id="tp13" fill="#F59E0B" d="M 295.40 277.00 L 295.30 276.90 C 295.20 277.00, 295.10 277.20, 295.10 277.30 C 295.20 277.20, 295.30 277.10, 295.40 277.00 Z" />
+                    <path id="tp14" fill="#F43F5E" d="M 304.00 187.50 C 300.10 206.80, 292.20 228.90, 278.20 253.50 C 277.40 262.50, 276.10 272.10, 274.20 282.70 C 281.10 267.50, 291.20 254.90, 305.20 242.30 C 344.50 206.70, 361.00 174.60, 365.70 163.90 C 362.40 159.60, 358.90 155.40, 355.20 151.50 C 345.20 161.00, 324.10 179.60, 304.00 187.50 Z" />
+                  </g>
+                </svg>
               </div>
-              <button class="btn btn-outline" style="width: 100%; padding: 0.55rem;" onclick="setDemoLogo('images/logo-concepts/sym3-varC-refined.svg')">Preview in Top Header &uarr;</button>
-            </div>
-          </div>
 
-          <!-- Variation 3D: Sun & Earth Greens -->
-          <div class="var-card">
-            <span style="font-size: 0.85rem; font-weight: 700; color: #0284c7; text-transform: uppercase;">Palette 3D</span>
-            <h3 style="font-size: 1.45rem; margin: 0.35rem 0 0.5rem 0;">Sun & Organic Greens</h3>
+              <!-- Controls -->
+              <div>
+                <h4 style="margin-bottom: 0.75rem;">Switch Tree Color Palette:</h4>
+                <div style="margin-bottom: 1.5rem;">
+                  <button class="color-preset-btn" onclick="applyTreeColors(['#1E293B','#10B981','#F59E0B','#059669','#10B981','#84CC16','#34D399','#F59E0B','#1E293B','#F43F5E','#0284C7','#FB7185','#0EA5E9','#F59E0B','#F43F5E'])">🌸 1. Cultural Blossom</button>
+                  <button class="color-preset-btn" onclick="applyTreeColors(['#316200','#10B981','#F59E0B','#5cbc09','#4d9500','#84CC16','#10B981','#F43F5E','#316200','#0EA5E9','#0284C7','#FB7185','#8B5CF6','#FBBF24','#0EA5E9'])">🌲 2. Heritage Green Trunk</button>
+                  <button class="color-preset-btn" onclick="applyTreeColors(['#334155','#10B981','#F59E0B','#10B981','#10B981','#F43F5E','#10B981','#F43F5E','#334155','#0284C7','#0284C7','#F43F5E','#0284C7','#F59E0B','#0284C7'])">🟡 3. Global Harmony Quartet</button>
+                  <button class="color-preset-btn" onclick="applyTreeColors(['#1E293B','#34D399','#F59E0B','#84CC16','#059669','#EAB308','#10B981','#F97316','#1E293B','#A855F7','#0EA5E9','#EF4444','#6366F1','#06B6D4','#EC4899'])">🌈 4. Chromatic Spectrum</button>
+                  <button class="color-preset-btn" onclick="applyTreeColors(['#1E293B','#F59E0B','#FBBF24','#F97316','#EA580C','#FDE047','#F59E0B','#F43F5E','#1E293B','#FB7185','#0284C7','#E11D48','#0EA5E9','#FBBF24','#F43F5E'])">🌅 5. Warm Sunrise</button>
+                  <button class="color-preset-btn" onclick="applyTreeColors(['#316200','#6eb90c','#4d9500','#6eb90c','#5cbc09','#4d9500','#5cbc09','#5cbc09','#316200','#5cbc09','#5cbc09','#5cbc09','#8bb90c','#5cbc09','#8bb90c'])">🍃 Original Monochrome Green</button>
+                </div>
 
-            <div class="var-preview-box">
-              <img src="images/logo-concepts/sym3-varD-nature-sun.svg" alt="Variation 3D">
-            </div>
-
-            <div class="palette-dots">
-              <div class="p-dot" style="background: #F59E0B;"></div>
-              <div class="p-dot" style="background: #10B981;"></div>
-              <div class="p-dot" style="background: #0284C7;"></div>
-              <div class="p-dot" style="background: #84CC16;"></div>
-            </div>
-
-            <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.65;">
-              <strong>Nature & Vitality:</strong> Connects to your letterhead tree heritage by alternating vibrant golden sunshine rays with fresh emerald, sunny lime, and clear sky azure. Radiant, fresh, and friendly.
-            </p>
-
-            <div style="margin-top: auto;">
-              <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">In Header:</span>
-              <div class="header-preview-sample">
-                <img src="images/logo-concepts/sym3-varD-nature-sun.svg" alt="Preview">
-                <span>Socido World Cultures</span>
+                <div style="background: #f1f5f9; padding: 1.25rem; border-radius: var(--radius-sm);">
+                  <p style="font-size: 0.95rem; color: #334155; margin: 0;">
+                    💡 <strong>Which approach speaks to you most?</strong><br>
+                    • <strong>Tree 1 (Cultural Blossom)</strong>: Balanced, vibrant, and elegant.<br>
+                    • <strong>Tree 2 (Heritage Green Trunk)</strong>: Maintains your original PDF green identity while celebrating diverse cultures.<br>
+                    • <strong>Tree 3 (Harmony Quartet)</strong>: Matches the 4 colors of Concept 3 for maximum punch.<br>
+                    • <strong>Tree 4 (Spectrum Wheel)</strong>: A full 360° celebration of world cultures.
+                  </p>
+                </div>
               </div>
-              <button class="btn btn-outline" style="width: 100%; padding: 0.55rem;" onclick="setDemoLogo('images/logo-concepts/sym3-varD-nature-sun.svg')">Preview in Top Header &uarr;</button>
-            </div>
-          </div>
 
-          <!-- Variation 3E: Tricolor Modern Primary -->
-          <div class="var-card">
-            <span style="font-size: 0.85rem; font-weight: 700; color: #0284c7; text-transform: uppercase;">Palette 3E</span>
-            <h3 style="font-size: 1.45rem; margin: 0.35rem 0 0.5rem 0;">Iconic Modern Tricolor</h3>
-
-            <div class="var-preview-box">
-              <img src="images/logo-concepts/sym3-varE-tricolor.svg" alt="Variation 3E">
-            </div>
-
-            <div class="palette-dots">
-              <div class="p-dot" style="background: #F59E0B;"></div>
-              <div class="p-dot" style="background: #F43F5E;"></div>
-              <div class="p-dot" style="background: #0284C7;"></div>
-              <div class="p-dot" style="background: #10B981;"></div>
-            </div>
-
-            <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.65;">
-              <strong>High-Impact Simplicity:</strong> Strong primary cadence of Sun Gold, Coral Red, and Royal Azure with an emerald accent ray. Super punchy, highly memorable from a distance, and timeless.
-            </p>
-
-            <div style="margin-top: auto;">
-              <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">In Header:</span>
-              <div class="header-preview-sample">
-                <img src="images/logo-concepts/sym3-varE-tricolor.svg" alt="Preview">
-                <span>Socido World Cultures</span>
-              </div>
-              <button class="btn btn-outline" style="width: 100%; padding: 0.55rem;" onclick="setDemoLogo('images/logo-concepts/sym3-varE-tricolor.svg')">Preview in Top Header &uarr;</button>
             </div>
           </div>
 
         </div>
 
-        <!-- Live Interactive Ray Color Mixer -->
-        <div class="interactive-tuner-card">
-          <h2 style="font-size: 1.85rem; margin-bottom: 0.5rem; text-align: center;">Interactive Custom Mixer</h2>
-          <p style="text-align: center; color: var(--text-muted); margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-            Want to test your own color ideas? Click any of the ray buttons below to customize the logo in real-time right here!
-          </p>
+        <!-- ============================================================= -->
+        <!-- TAB 2: CONCEPT 3 RADIANT SUNBURST VARIATIONS                 -->
+        <!-- ============================================================= -->
+        <div id="sunTab" class="tab-content">
 
-          <div class="tuner-layout">
-            
-            <!-- Live SVG Render -->
-            <div class="custom-svg-display">
-              <svg id="liveSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="180" height="180">
-                <defs>
-                  <path id="live-ray" d="M 100 22 C 112 22, 118 38, 114 54 C 110 70, 100 84, 100 84 C 100 84, 90 70, 86 54 C 82 38, 88 22, 100 22 Z" />
-                </defs>
-                <g id="raysGroup">
-                  <use id="ray0" href="#live-ray" fill="#F59E0B" />
-                  <use id="ray1" href="#live-ray" fill="#F43F5E" transform="rotate(45 100 100)" />
-                  <use id="ray2" href="#live-ray" fill="#0284C7" transform="rotate(90 100 100)" />
-                  <use id="ray3" href="#live-ray" fill="#10B981" transform="rotate(135 100 100)" />
-                  <use id="ray4" href="#live-ray" fill="#F59E0B" transform="rotate(180 100 100)" />
-                  <use id="ray5" href="#live-ray" fill="#F43F5E" transform="rotate(225 100 100)" />
-                  <use id="ray6" href="#live-ray" fill="#0284C7" transform="rotate(270 100 100)" />
-                  <use id="ray7" href="#live-ray" fill="#10B981" transform="rotate(315 100 100)" />
-                </g>
-                <circle cx="100" cy="100" r="30" fill="#ffffff" />
-                <circle id="coreOuter" cx="100" cy="100" r="23" fill="#F59E0B" />
-                <circle cx="100" cy="100" r="14" fill="#ffffff" />
-                <circle id="coreInner" cx="100" cy="100" r="7" fill="#0284C7" />
-              </svg>
-            </div>
+          <div style="text-align: center; max-width: 700px; margin: 0 auto 2.5rem auto;">
+            <h2 style="font-size: 2rem; margin-bottom: 0.5rem;">Concept 3: Radiant Sunburst Pinwheel</h2>
+            <p style="color: var(--text-muted); font-size: 1.05rem;">
+              8 symmetrical rays orbiting a cheerful core, representing cultural traditions moving together in harmonious unity.
+            </p>
+          </div>
 
-            <!-- Controls -->
-            <div>
-              <h4 style="margin-bottom: 0.75rem;">Quick Color Harmony Presets:</h4>
-              <div style="margin-bottom: 1.5rem;">
-                <button class="color-preset-btn" onclick="applyPreset(['#F59E0B','#F43F5E','#0284C7','#10B981','#F59E0B','#F43F5E','#0284C7','#10B981'])">🟡 Quartet Harmony (Gold/Coral/Blue/Green)</button>
-                <button class="color-preset-btn" onclick="applyPreset(['#FBBF24','#F97316','#EF4444','#A855F7','#3B82F6','#06B6D4','#10B981','#84CC16'])">🌈 8-Color Full Rainbow</button>
-                <button class="color-preset-btn" onclick="applyPreset(['#F59E0B','#10B981','#0284C7','#84CC16','#F59E0B','#10B981','#0284C7','#84CC16'])">🌿 Gold, Azure & Green</button>
-                <button class="color-preset-btn" onclick="applyPreset(['#D97706','#E11D48','#7C3AED','#0284C7','#D97706','#E11D48','#7C3AED','#059669'])">🏛️ Deep Royal Heritage</button>
+          <!-- 5 Curated Color Tunings for Concept 3 -->
+          <div class="variation-grid">
+
+            <!-- Variation 3A: Global Harmony Quartet -->
+            <div class="var-card">
+              <span style="font-size: 0.85rem; font-weight: 700; color: #0284c7; text-transform: uppercase;">Palette 3A</span>
+              <h3 style="font-size: 1.45rem; margin: 0.35rem 0 0.5rem 0;">Global Harmony Quartet</h3>
+              
+              <div class="var-preview-box">
+                <img src="images/logo-concepts/sym3-varA-harmony4.svg" alt="Variation 3A">
               </div>
 
-              <div style="background: #f1f5f9; padding: 1.25rem; border-radius: var(--radius-sm);">
-                <p style="font-size: 0.95rem; color: #334155; margin: 0;">
-                  💡 <strong>Tell me your thoughts:</strong> Do you prefer the balanced 4-color symmetry (Palette 3A), the smooth 8-color rainbow (Palette 3B), or would you like specific colors (e.g. warmer sunset tones, cooler ocean tones, or pastel brights)?
-                </p>
+              <div class="palette-dots">
+                <div class="p-dot" style="background: #F59E0B;" title="Sunbeam Gold #F59E0B"></div>
+                <div class="p-dot" style="background: #F43F5E;" title="Coral Rose #F43F5E"></div>
+                <div class="p-dot" style="background: #0284C7;" title="Ocean Blue #0284C7"></div>
+                <div class="p-dot" style="background: #10B981;" title="Emerald Jade #10B981"></div>
+              </div>
+
+              <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.65;">
+                <strong>Balanced Mirrored Pairs:</strong> 4 colors each appear twice in 180° opposite symmetry. Clean, perfectly balanced, and joyful.
+              </p>
+
+              <div style="margin-top: auto;">
+                <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">In Header:</span>
+                <div class="header-preview-sample">
+                  <img src="images/logo-concepts/sym3-varA-harmony4.svg" alt="Preview">
+                  <span>Socido World Cultures</span>
+                </div>
+                <button class="btn btn-outline" style="width: 100%; padding: 0.55rem;" onclick="setDemoLogo('images/logo-concepts/sym3-varA-harmony4.svg')">Preview in Top Header &uarr;</button>
+              </div>
+            </div>
+
+            <!-- Variation 3B: Continuous Chromatic Spectrum -->
+            <div class="var-card">
+              <span style="font-size: 0.85rem; font-weight: 700; color: #0284c7; text-transform: uppercase;">Palette 3B</span>
+              <h3 style="font-size: 1.45rem; margin: 0.35rem 0 0.5rem 0;">Chromatic Spectrum Wheel</h3>
+
+              <div class="var-preview-box">
+                <img src="images/logo-concepts/sym3-varB-spectrum8.svg" alt="Variation 3B">
+              </div>
+
+              <div class="palette-dots">
+                <div class="p-dot" style="background: #FBBF24;"></div>
+                <div class="p-dot" style="background: #F97316;"></div>
+                <div class="p-dot" style="background: #EF4444;"></div>
+                <div class="p-dot" style="background: #A855F7;"></div>
+                <div class="p-dot" style="background: #3B82F6;"></div>
+                <div class="p-dot" style="background: #06B6D4;"></div>
+                <div class="p-dot" style="background: #10B981;"></div>
+                <div class="p-dot" style="background: #84CC16;"></div>
+              </div>
+
+              <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.65;">
+                <strong>Smooth Cultural Rainbow:</strong> A harmonious progression from warm sun yellow and orange through crimson, orchid purple, ocean azure, and spring green.
+              </p>
+
+              <div style="margin-top: auto;">
+                <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">In Header:</span>
+                <div class="header-preview-sample">
+                  <img src="images/logo-concepts/sym3-varB-spectrum8.svg" alt="Preview">
+                  <span>Socido World Cultures</span>
+                </div>
+                <button class="btn btn-outline" style="width: 100%; padding: 0.55rem;" onclick="setDemoLogo('images/logo-concepts/sym3-varB-spectrum8.svg')">Preview in Top Header &uarr;</button>
+              </div>
+            </div>
+
+            <!-- Variation 3C: Refined Heritage -->
+            <div class="var-card">
+              <span style="font-size: 0.85rem; font-weight: 700; color: #0284c7; text-transform: uppercase;">Palette 3C</span>
+              <h3 style="font-size: 1.45rem; margin: 0.35rem 0 0.5rem 0;">Refined Heritage</h3>
+
+              <div class="var-preview-box">
+                <img src="images/logo-concepts/sym3-varC-refined.svg" alt="Variation 3C">
+              </div>
+
+              <div class="palette-dots">
+                <div class="p-dot" style="background: #D97706;"></div>
+                <div class="p-dot" style="background: #E11D48;"></div>
+                <div class="p-dot" style="background: #7C3AED;"></div>
+                <div class="p-dot" style="background: #0284C7;"></div>
+                <div class="p-dot" style="background: #059669;"></div>
+              </div>
+
+              <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.65;">
+                <strong>High-Trust Institutional Hues:</strong> Saffron gold, terracotta rose, royal purple, Mediterranean blue, and forest jade. Sophisticated and authoritative.
+              </p>
+
+              <div style="margin-top: auto;">
+                <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">In Header:</span>
+                <div class="header-preview-sample">
+                  <img src="images/logo-concepts/sym3-varC-refined.svg" alt="Preview">
+                  <span>Socido World Cultures</span>
+                </div>
+                <button class="btn btn-outline" style="width: 100%; padding: 0.55rem;" onclick="setDemoLogo('images/logo-concepts/sym3-varC-refined.svg')">Preview in Top Header &uarr;</button>
+              </div>
+            </div>
+
+            <!-- Variation 3D: Sun & Earth Greens -->
+            <div class="var-card">
+              <span style="font-size: 0.85rem; font-weight: 700; color: #0284c7; text-transform: uppercase;">Palette 3D</span>
+              <h3 style="font-size: 1.45rem; margin: 0.35rem 0 0.5rem 0;">Sun & Organic Greens</h3>
+
+              <div class="var-preview-box">
+                <img src="images/logo-concepts/sym3-varD-nature-sun.svg" alt="Variation 3D">
+              </div>
+
+              <div class="palette-dots">
+                <div class="p-dot" style="background: #F59E0B;"></div>
+                <div class="p-dot" style="background: #10B981;"></div>
+                <div class="p-dot" style="background: #0284C7;"></div>
+                <div class="p-dot" style="background: #84CC16;"></div>
+              </div>
+
+              <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.65;">
+                <strong>Nature & Vitality:</strong> Connects to your green brand heritage by alternating vibrant golden sunshine rays with fresh emerald, sunny lime, and clear sky azure.
+              </p>
+
+              <div style="margin-top: auto;">
+                <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">In Header:</span>
+                <div class="header-preview-sample">
+                  <img src="images/logo-concepts/sym3-varD-nature-sun.svg" alt="Preview">
+                  <span>Socido World Cultures</span>
+                </div>
+                <button class="btn btn-outline" style="width: 100%; padding: 0.55rem;" onclick="setDemoLogo('images/logo-concepts/sym3-varD-nature-sun.svg')">Preview in Top Header &uarr;</button>
+              </div>
+            </div>
+
+            <!-- Variation 3E: Tricolor Modern Primary -->
+            <div class="var-card">
+              <span style="font-size: 0.85rem; font-weight: 700; color: #0284c7; text-transform: uppercase;">Palette 3E</span>
+              <h3 style="font-size: 1.45rem; margin: 0.35rem 0 0.5rem 0;">Iconic Modern Tricolor</h3>
+
+              <div class="var-preview-box">
+                <img src="images/logo-concepts/sym3-varE-tricolor.svg" alt="Variation 3E">
+              </div>
+
+              <div class="palette-dots">
+                <div class="p-dot" style="background: #F59E0B;"></div>
+                <div class="p-dot" style="background: #F43F5E;"></div>
+                <div class="p-dot" style="background: #0284C7;"></div>
+                <div class="p-dot" style="background: #10B981;"></div>
+              </div>
+
+              <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.65;">
+                <strong>High-Impact Simplicity:</strong> Strong primary cadence of Sun Gold, Coral Red, and Royal Azure with an emerald accent ray. Punchy and memorable.
+              </p>
+
+              <div style="margin-top: auto;">
+                <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">In Header:</span>
+                <div class="header-preview-sample">
+                  <img src="images/logo-concepts/sym3-varE-tricolor.svg" alt="Preview">
+                  <span>Socido World Cultures</span>
+                </div>
+                <button class="btn btn-outline" style="width: 100%; padding: 0.55rem;" onclick="setDemoLogo('images/logo-concepts/sym3-varE-tricolor.svg')">Preview in Top Header &uarr;</button>
               </div>
             </div>
 
           </div>
+
+          <!-- Live Interactive Ray Color Mixer for Sunburst -->
+          <div class="interactive-tuner-card">
+            <h2 style="font-size: 1.85rem; margin-bottom: 0.5rem; text-align: center;">Interactive Sunburst Mixer</h2>
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+              Test your own color harmonies on the Concept 3 Sunburst in real-time right here!
+            </p>
+
+            <div class="tuner-layout">
+              
+              <!-- Live SVG Render -->
+              <div class="custom-svg-display">
+                <svg id="liveSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="180" height="180">
+                  <defs>
+                    <path id="live-ray" d="M 100 22 C 112 22, 118 38, 114 54 C 110 70, 100 84, 100 84 C 100 84, 90 70, 86 54 C 82 38, 88 22, 100 22 Z" />
+                  </defs>
+                  <g id="raysGroup">
+                    <use id="ray0" href="#live-ray" fill="#F59E0B" />
+                    <use id="ray1" href="#live-ray" fill="#F43F5E" transform="rotate(45 100 100)" />
+                    <use id="ray2" href="#live-ray" fill="#0284C7" transform="rotate(90 100 100)" />
+                    <use id="ray3" href="#live-ray" fill="#10B981" transform="rotate(135 100 100)" />
+                    <use id="ray4" href="#live-ray" fill="#F59E0B" transform="rotate(180 100 100)" />
+                    <use id="ray5" href="#live-ray" fill="#F43F5E" transform="rotate(225 100 100)" />
+                    <use id="ray6" href="#live-ray" fill="#0284C7" transform="rotate(270 100 100)" />
+                    <use id="ray7" href="#live-ray" fill="#10B981" transform="rotate(315 100 100)" />
+                  </g>
+                  <circle cx="100" cy="100" r="30" fill="#ffffff" />
+                  <circle id="coreOuter" cx="100" cy="100" r="23" fill="#F59E0B" />
+                  <circle cx="100" cy="100" r="14" fill="#ffffff" />
+                  <circle id="coreInner" cx="100" cy="100" r="7" fill="#0284C7" />
+                </svg>
+              </div>
+
+              <!-- Controls -->
+              <div>
+                <h4 style="margin-bottom: 0.75rem;">Quick Color Harmony Presets:</h4>
+                <div style="margin-bottom: 1.5rem;">
+                  <button class="color-preset-btn" onclick="applyPreset(['#F59E0B','#F43F5E','#0284C7','#10B981','#F59E0B','#F43F5E','#0284C7','#10B981'])">🟡 Quartet Harmony (Gold/Coral/Blue/Green)</button>
+                  <button class="color-preset-btn" onclick="applyPreset(['#FBBF24','#F97316','#EF4444','#A855F7','#3B82F6','#06B6D4','#10B981','#84CC16'])">🌈 8-Color Full Rainbow</button>
+                  <button class="color-preset-btn" onclick="applyPreset(['#F59E0B','#10B981','#0284C7','#84CC16','#F59E0B','#10B981','#0284C7','#84CC16'])">🌿 Gold, Azure & Green</button>
+                  <button class="color-preset-btn" onclick="applyPreset(['#D97706','#E11D48','#7C3AED','#0284C7','#D97706','#E11D48','#7C3AED','#059669'])">🏛️ Deep Royal Heritage</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
         </div>
 
       </div>
@@ -386,6 +747,21 @@
   </footer>
 
   <script>
+    function switchTab(tab) {
+      document.getElementById('treeTab').classList.remove('active');
+      document.getElementById('sunTab').classList.remove('active');
+      document.getElementById('tabTreeBtn').classList.remove('active');
+      document.getElementById('tabSunBtn').classList.remove('active');
+
+      if (tab === 'tree') {
+        document.getElementById('treeTab').classList.add('active');
+        document.getElementById('tabTreeBtn').classList.add('active');
+      } else {
+        document.getElementById('sunTab').classList.add('active');
+        document.getElementById('tabSunBtn').classList.add('active');
+      }
+    }
+
     function setDemoLogo(svgPath) {
       const badge = document.getElementById('demoLogoBadge');
       if (badge) {
@@ -401,6 +777,13 @@
       }
       document.getElementById('coreOuter').setAttribute('fill', colors[0]);
       document.getElementById('coreInner').setAttribute('fill', colors[2] || colors[1]);
+    }
+
+    function applyTreeColors(colors) {
+      for (let i = 0; i < 15; i++) {
+        const el = document.getElementById('tp' + i);
+        if (el) el.setAttribute('fill', colors[i]);
+      }
     }
   </script>
 </body>

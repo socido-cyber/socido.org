@@ -1,18 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
   <defs>
     <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#f3f8ee"/>
-      <stop offset="100%" stop-color="#e2edd9"/>
+      <stop offset="0%" stop-color="#f0f9ff"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
     </linearGradient>
   </defs>
   <rect width="200" height="200" fill="url(#avatarGrad)" rx="100"/>
   <!-- Head Silhouette -->
-  <circle cx="100" cy="78" r="38" fill="#316200" opacity="0.25"/>
-  <circle cx="100" cy="76" r="34" fill="#316200" opacity="0.85"/>
+  <circle cx="100" cy="78" r="38" fill="#0284c7" opacity="0.2"/>
+  <circle cx="100" cy="76" r="34" fill="#0284c7" opacity="0.85"/>
   <!-- Shoulders Silhouette -->
-  <path d="M 38 184 C 42 136, 68 122, 100 122 C 132 122, 158 136, 162 184 Z" fill="#316200" opacity="0.85"/>
+  <path d="M 38 184 C 42 136, 68 122, 100 122 C 132 122, 158 136, 162 184 Z" fill="#0284c7" opacity="0.85"/>
   <!-- Photo Camera Badge -->
-  <circle cx="150" cy="150" r="22" fill="#ffffff" stroke="#316200" stroke-width="2"/>
-  <path d="M 142 144 L 145 141 L 155 141 L 158 144 L 161 144 C 162.6 144, 164 145.4, 164 147 L 164 157 C 164 158.6, 162.6 160, 161 160 L 139 160 C 137.4 160, 136 158.6, 136 157 L 136 147 C 136 145.4, 137.4 144, 139 144 Z" fill="none" stroke="#316200" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="150" cy="152" r="4.5" fill="none" stroke="#316200" stroke-width="2"/>
+  <circle cx="150" cy="150" r="22" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+  <path d="M 142 144 L 145 141 L 155 141 L 158 144 L 161 144 C 162.6 144, 164 145.4, 164 147 L 164 157 C 164 158.6, 162.6 160, 161 160 L 139 160 C 137.4 160, 136 158.6, 136 157 L 136 147 C 136 145.4, 137.4 144, 139 144 Z" fill="none" stroke="#0284c7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="150" cy="152" r="4.5" fill="none" stroke="#0284c7" stroke-width="2"/>
 </svg>
